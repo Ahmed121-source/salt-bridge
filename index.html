@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salt Bridge Minerals — Rock Salt from the Siwa Oasis, Egypt</title>
+  <meta name="description" content="Salt Bridge Minerals supplies bulk and bagged salt from the Siwa Oasis, Egypt: washed, crushed and sieved salt, industrial salt, water softener tablets, vacuum salt and refined table salt.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="brand-colors.css">
+  <style>
+    :root {
+      /* Outfit is a visual match for the reference lettering, pending approval. */
+      --font: "Outfit", var(--salt-font);
+      --container: 1200px;
+      --gutter: clamp(20px, 4vw, 40px);
+      --radius: 18px;
+      --header-h: 94px;
+      --line: #dcefeb;
+      --tint: #dff5f0;
+      --body-ink: #1d3340;
+      --shadow: 0 1px 2px rgba(7, 57, 72, .04), 0 12px 32px rgba(7, 57, 72, .07);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); }
+    body {
+      margin: 0;
+      background: var(--salt-white);
+      color: var(--body-ink);
+      font-family: var(--font);
+      font-weight: 300;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img, video { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { margin: 0; color: var(--salt-heading); font-weight: 600; letter-spacing: -.02em; line-height: 1.08; }
+    p, ul, dl, dd, figure { margin: 0; }
+    ul { padding: 0; list-style: none; }
+    :focus-visible { outline: 3px solid var(--salt-teal); outline-offset: 3px; border-radius: 6px; }
+
+    .container { width: 100%; max-width: calc(var(--container) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+    .section { padding-block: clamp(64px, 9vw, 120px); }
+    .section--mint { background: var(--salt-page-bg); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--salt-teal); font-size: .875rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: currentColor; }
+    .section-head { max-width: 720px; margin-bottom: clamp(36px, 5vw, 56px); }
+    .section-head h2 { margin-top: 14px; font-size: clamp(2rem, 4.4vw, 3.25rem); }
+    .section-head p { margin-top: 16px; font-size: 1.25rem; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .6em;
+      padding: .85em 1.75em;
+      border: 1.5px solid var(--salt-teal); border-radius: 999px;
+      background: var(--salt-teal); color: var(--salt-white);
+      font: 500 1.0625rem/1.2 var(--font); white-space: nowrap; cursor: pointer;
+      transition: background .2s, border-color .2s, color .2s, box-shadow .2s;
+    }
+    .btn svg { width: 1.1em; height: 1.1em; transition: transform .2s; }
+    .btn:hover { background: #017f7e; border-color: #017f7e; box-shadow: 0 8px 20px rgba(1, 152, 151, .28); }
+    .btn:hover svg { transform: translateX(3px); }
+    .btn--sm { padding: .75em 1.5em; font-size: 1rem; }
+    .btn--lg { padding: 1em 2em; font-size: 1.1875rem; }
+    .btn--light { background: transparent; border-color: rgba(255, 255, 255, .7); }
+    .btn--light:hover { background: var(--salt-white); border-color: var(--salt-white); color: var(--salt-heading); box-shadow: none; }
+    .text-link { display: inline-flex; align-items: center; gap: .55em; padding: 0; border: 0; background: none; color: var(--salt-teal); font: 500 1.0625rem/1.2 var(--font); cursor: pointer; }
+    .text-link svg { width: 1.1em; height: 1.1em; transition: transform .2s; }
+    .text-link:hover { color: var(--salt-deep-blue); }
+    .text-link:hover svg { transform: translateX(4px); }
+
+    /* Header: white, so the supplied white-background logo sits cleanly */
+    .site-header { position: sticky; top: 0; z-index: 50; height: var(--header-h); background: rgba(255, 255, 255, .94); backdrop-filter: blur(10px); border-bottom: 1px solid transparent; transition: border-color .2s, box-shadow .2s; }
+    .site-header.is-stuck { border-color: var(--line); box-shadow: 0 6px 24px rgba(7, 57, 72, .06); }
+    .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 100%; }
+    .logo { display: inline-flex; align-items: center; }
+    .logo img { height: 72px; width: auto; }
+    .nav { display: flex; align-items: center; gap: clamp(18px, 3vw, 40px); }
+    .nav ul { display: flex; gap: clamp(18px, 3vw, 40px); }
+    .nav a:not(.btn) { color: var(--salt-heading); font-size: 1rem; font-weight: 400; padding-block: 6px; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
+    .nav a:not(.btn):hover { color: var(--salt-teal); border-color: var(--salt-teal); }
+    .nav-toggle { display: none; width: 46px; height: 46px; border: 0; border-radius: 50%; background: var(--tint); color: var(--salt-heading); cursor: pointer; }
+    .nav-toggle svg { width: 22px; height: 22px; }
+
+    /* Hero: full-screen media with centred title */
+    .hero { position: relative; display: grid; min-height: min(calc(100vh - var(--header-h)), 1000px); min-height: min(calc(100svh - var(--header-h)), 1000px); overflow: hidden; background: var(--salt-deep-blue); color: var(--salt-white); }
+    .hero__media, .hero__media > * { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    /* Negative first delay so the first photo is already visible on load */
+    .hero__media img { opacity: 0; animation: hero-slide 28s -1.5s infinite; }
+    .hero__media img:nth-child(2) { animation-delay: 5.5s; }
+    .hero__media img:nth-child(3) { animation-delay: 12.5s; }
+    .hero__media img:nth-child(4) { animation-delay: 19.5s; }
+    @keyframes hero-slide {
+      0% { opacity: 0; transform: scale(1.02); }
+      5%, 25% { opacity: 1; }
+      32%, 100% { opacity: 0; transform: scale(1.1); }
+    }
+    .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 10, 43, .34) 0%, rgba(7, 57, 72, .38) 55%, rgba(0, 10, 43, .74) 100%); }
+    .hero__inner { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding-block: 72px 48px; }
+    .hero .eyebrow { color: #a8ece6; }
+    .hero h1 { margin-top: 20px; max-width: 13em; color: var(--salt-white); font-size: clamp(2.75rem, 7.4vw, 6rem); font-weight: 700; letter-spacing: -.03em; line-height: .98; text-wrap: balance; }
+    .hero__lede { margin-top: 24px; max-width: 30em; font-size: clamp(1.1875rem, 2vw, 1.5rem); line-height: 1.35; text-wrap: balance; }
+    .hero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 36px; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; margin-top: clamp(48px, 8vh, 96px); border-top: 1px solid rgba(255, 255, 255, .28); }
+    .stats > div { padding: 22px 16px 0; }
+    .stats > div + div { border-left: 1px solid rgba(255, 255, 255, .28); }
+    .stats dt { font-size: clamp(1.75rem, 3.4vw, 2.75rem); font-weight: 600; letter-spacing: -.02em; line-height: 1.1; }
+    .stats dd { margin-top: 6px; color: #d6f3ef; font-size: 1rem; line-height: 1.3; }
+
+    /* Source */
+    .split { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(32px, 6vw, 88px); }
+    .split__media { position: relative; }
+    .split__media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
+    .split__media img + img { position: absolute; right: -18px; bottom: -32px; width: 44%; aspect-ratio: 1; border: 6px solid var(--salt-white); box-shadow: var(--shadow); }
+    .split h2 { margin-top: 14px; font-size: clamp(2rem, 4.4vw, 3.25rem); }
+    .split p { margin-top: 18px; }
+    .checks { display: grid; gap: 12px; margin-top: 26px; }
+    .checks li { display: flex; gap: 12px; align-items: flex-start; color: var(--salt-heading); font-weight: 400; line-height: 1.4; }
+    .checks svg { flex: none; width: 24px; height: 24px; padding: 5px; border-radius: 50%; background: var(--tint); color: var(--salt-teal); }
+
+    /* Products */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 2.6vw, 32px); }
+    .card { display: flex; flex-direction: column; background: var(--salt-white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform .25s, box-shadow .25s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgba(7, 57, 72, .05), 0 22px 48px rgba(7, 57, 72, .13); }
+    .card > img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+    .card__body { display: flex; flex-direction: column; flex: 1; padding: 26px 28px 30px; }
+    .card h3 { font-size: 1.625rem; }
+    .card p { margin-top: 10px; font-size: 1.0625rem; line-height: 1.5; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 24px; }
+    .tags li { padding: .3em .85em; border-radius: 999px; background: var(--salt-page-bg); border: 1px solid var(--line); color: var(--salt-deep-blue); font-size: .9375rem; font-weight: 400; }
+    .card .text-link { margin-top: auto; align-self: flex-start; }
+
+    .products-intro { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(24px, 5vw, 72px); align-items: end; margin-bottom: clamp(36px, 5vw, 56px); }
+    .products-intro .section-head { margin-bottom: 0; }
+    .products-intro .checks { margin-top: 0; padding: 24px 26px; background: var(--salt-white); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .card h3 span { display: block; margin-top: 4px; color: var(--salt-teal); font-size: 1.0625rem; font-weight: 500; letter-spacing: 0; }
+    .card h3 + .text-link { padding-top: 20px; }
+
+    /* Specifications */
+    .specs { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
+    .spec-facts { display: grid; gap: 0; margin-top: 8px; }
+    .spec-facts > div { display: grid; grid-template-columns: 9.5em 1fr; gap: 16px; padding-block: 18px; border-top: 1px solid var(--line); }
+    .spec-facts dt { color: var(--salt-teal); font-size: .9375rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding-top: .2em; }
+    .spec-facts dd { color: var(--salt-heading); font-weight: 400; line-height: 1.45; }
+    .table-card { background: var(--salt-white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    .table-card h3 { padding: 24px 28px 18px; font-size: 1.375rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 1.0625rem; }
+    th, td { padding: 11px 28px; text-align: left; border-top: 1px solid var(--line); }
+    thead th { background: var(--salt-page-bg); color: var(--salt-deep-blue); font-size: .875rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+    tbody th { font-weight: 300; }
+    tbody th span { color: #5c7480; font-size: .9375rem; }
+    td { text-align: right; color: var(--salt-heading); font-weight: 500; font-variant-numeric: tabular-nums; }
+    thead th:last-child { text-align: right; }
+    .table-card p { padding: 16px 28px 22px; border-top: 1px solid var(--line); color: #5c7480; font-size: .9375rem; line-height: 1.45; }
+
+    /* Supply */
+    .supply-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(20px, 2.6vw, 32px); }
+    .panel { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 420px; padding: clamp(24px, 3vw, 40px); border-radius: var(--radius); overflow: hidden; color: var(--salt-white); background: var(--salt-deep-blue); }
+    .panel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+    .panel:hover img { transform: scale(1.04); }
+    .panel::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 10, 43, .05) 20%, rgba(0, 10, 43, .86) 100%); }
+    .panel > :not(img) { position: relative; z-index: 1; }
+    .panel h3 { color: var(--salt-white); font-size: clamp(1.625rem, 2.6vw, 2rem); }
+    .panel p { margin-top: 8px; max-width: 26em; font-size: 1.0625rem; line-height: 1.45; }
+    .panel .tags { margin: 16px 0 0; }
+    .panel .tags li { background: rgba(255, 255, 255, .16); border-color: rgba(255, 255, 255, .3); color: var(--salt-white); backdrop-filter: blur(4px); }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 4vw, 56px); margin-top: clamp(40px, 6vw, 72px); }
+    .feature__icon { display: grid; place-items: center; width: 60px; height: 60px; margin-bottom: 18px; border-radius: 50%; background: var(--tint); color: var(--salt-heading); }
+    .feature__icon svg { width: 28px; height: 28px; }
+    .feature h3 { font-size: 1.375rem; }
+    .feature p { margin-top: 8px; font-size: 1.0625rem; line-height: 1.5; }
+
+    /* Gallery */
+    .gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: clamp(150px, 19vw, 250px); gap: 14px; }
+    .gallery img { width: 100%; height: 100%; object-fit: cover; border-radius: 14px; }
+    .gallery .wide { grid-column: span 2; }
+    .gallery .tall { grid-row: span 2; }
+
+    /* Call to action */
+    .cta { position: relative; overflow: hidden; background: var(--salt-deep-blue); color: var(--salt-white); text-align: center; }
+    .cta > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .cta::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 10, 43, .78), rgba(7, 57, 72, .82)); }
+    .cta .container { position: relative; z-index: 1; padding-block: clamp(72px, 10vw, 128px); }
+    .cta h2 { color: var(--salt-white); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; }
+    .cta p { margin: 16px auto 0; max-width: 28em; font-size: 1.3125rem; line-height: 1.4; }
+    .cta .btn { margin-top: 32px; }
+
+    /* Footer */
+    .site-footer { padding-block: 28px; border-top: 1px solid var(--line); }
+    .site-footer .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-footer small { color: #5c7480; font-size: .9375rem; }
+
+    /* Quote dialog */
+    dialog { width: min(560px, calc(100vw - 32px)); padding: 0; border: 0; border-radius: 20px; background: var(--salt-white); color: var(--body-ink); box-shadow: 0 30px 80px rgba(0, 10, 43, .35); }
+    dialog::backdrop { background: rgba(0, 10, 43, .55); backdrop-filter: blur(3px); }
+    .quote { padding: clamp(24px, 5vw, 36px); }
+    .quote__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+    .quote h2 { font-size: 1.875rem; }
+    .quote__head p { margin-top: 6px; font-size: 1.0625rem; }
+    .quote__close { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border: 0; border-radius: 50%; background: var(--tint); color: var(--salt-heading); cursor: pointer; }
+    .quote__close svg { width: 18px; height: 18px; }
+    .quote__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
+    .field { display: grid; gap: 6px; }
+    .field--full { grid-column: 1 / -1; }
+    .field label { color: var(--salt-heading); font-size: .9375rem; font-weight: 500; }
+    .field input, .field select, .field textarea { width: 100%; padding: .7em .9em; border: 1.5px solid #cfe6e1; border-radius: 10px; background: var(--salt-mint); color: var(--salt-heading); font: 400 1rem/1.4 var(--font); }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--salt-teal); background: var(--salt-white); }
+    .field textarea { min-height: 96px; resize: vertical; }
+    .quote__foot { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 22px; }
+    .quote__status { flex: 1; min-width: 12em; color: var(--salt-deep-blue); font-size: .9375rem; font-weight: 400; line-height: 1.4; }
+
+    /* Scroll reveal (only when JS is running) */
+    .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .js .reveal.is-visible { opacity: 1; transform: none; }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .cards, .features { grid-template-columns: 1fr 1fr; }
+      .specs, .split, .products-intro { grid-template-columns: 1fr; }
+      .split__media { margin-bottom: 32px; }
+      .gallery { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 860px) {
+      :root { --header-h: 78px; }
+      .logo img { height: 52px; }
+      .nav-toggle { display: grid; place-items: center; }
+      .site-header .nav { display: none; position: absolute; top: calc(100% + 8px); left: var(--gutter); right: var(--gutter); flex-direction: column; align-items: stretch; gap: 16px; padding: 20px; background: var(--salt-white); border-radius: var(--radius); box-shadow: 0 20px 50px rgba(7, 57, 72, .18); }
+      .site-header .nav.is-open { display: flex; }
+      .site-header .nav ul { flex-direction: column; gap: 4px; }
+      .site-header .nav a:not(.btn) { display: block; padding: 10px 4px; font-size: 1.125rem; }
+      .stats { grid-template-columns: 1fr 1fr; }
+      .stats > div { padding: 18px 12px; }
+      .stats > div:nth-child(3) { border-left: 0; }
+      .stats > div:nth-child(n+3) { border-top: 1px solid rgba(255, 255, 255, .28); }
+    }
+    @media (max-width: 680px) {
+      body { font-size: 1.0625rem; }
+      .cards, .features, .supply-grid, .quote__grid { grid-template-columns: 1fr; }
+      .panel { min-height: 340px; }
+      .spec-facts > div { grid-template-columns: 1fr; gap: 4px; }
+      th, td, .table-card h3, .table-card p { padding-inline: 18px; }
+      .split__media img + img { right: 10px; bottom: -24px; }
+      .site-footer .container { flex-direction: column; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+      .hero__media img { animation: none; }
+      .hero__media img:first-child { opacity: 1; }
+      .js .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.500l5 5L20 6.500"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-ship" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M7 7h10v5l-5-1.500L7 12zM3.500 13.500 12 11l8.500 2.500L18 19H6zM3 21.500c1.500 0 1.500-1 3-1s1.500 1 3 1 1.500-1 3-1 1.500 1 3 1 1.500-1 3-1 1.500 1 3 1"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.500v9L12 21l-8-4.500v-9zM4 7.500l8 4.500 8-4.500M12 12v9"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.800 2.600 4 5.600 4 9s-1.200 6.400-4 9c-2.800-2.600-4-5.600-4-9s1.200-6.400 4-9z"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#top" aria-label="Salt Bridge Minerals home">
+        <img src="assets/salt-bridge-minerals-wide.png" alt="Salt Bridge Minerals" width="953" height="220">
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+        <svg><use href="#i-menu"/></svg>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#source">Source</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#specifications">Specifications</a></li>
+          <li><a href="#supply">Supply</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn btn--sm" type="button" data-quote>Request a Quote <svg><use href="#i-arrow"/></svg></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__media" aria-hidden="true">
+        <img src="assets/photos/lake-stockpiles.jpg" alt="">
+        <img src="assets/photos/siwa-salt-lake.jpg" alt="">
+        <img src="assets/photos/conveyor-stockpile.jpg" alt="">
+        <img src="assets/photos/lake-horizon.jpg" alt="">
+        <!-- To use a background video instead of the photo slideshow, save it as
+             assets/hero.mp4 and replace the four images above with:
+             <video src="assets/hero.mp4" poster="assets/photos/lake-stockpiles.jpg" autoplay muted loop playsinline></video> -->
+      </div>
+      <div class="container hero__inner">
+        <span class="eyebrow">Siwa Oasis · Egypt</span>
+        <h1>Rock salt from the Siwa Oasis</h1>
+        <p class="hero__lede">Bulk and bagged salt supply for distributors and commercial buyers worldwide.</p>
+        <div class="hero__actions">
+          <button class="btn btn--lg" type="button" data-quote>Request a Quote <svg><use href="#i-arrow"/></svg></button>
+          <a class="btn btn--lg btn--light" href="#products">Explore Products</a>
+        </div>
+        <dl class="stats">
+          <div><dt>99%+</dt><dd>Sodium chloride purity</dd></div>
+          <div><dt>&lt; 1.5%</dt><dd>Moisture content</dd></div>
+          <div><dt>12,500 MT</dt><dd>Minimum bulk vessel cargo</dd></div>
+          <div><dt>5–25 kg</dt><dd>Bags, plus jumbo bags</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="source">
+      <div class="container split">
+        <div class="split__media reveal">
+          <img src="assets/photos/siwa-salt-lake.jpg" alt="Turquoise salt lake in the Siwa Oasis" loading="lazy">
+          <img src="assets/photos/salt-in-hand.jpg" alt="White rock salt crystals held in a hand" loading="lazy">
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">The source</span>
+          <h2>Naturally white salt from Egypt’s Western Desert</h2>
+          <p>Our rock salt comes from the quarries of the Siwa Oasis, where salt is lifted from brilliant turquoise salt lakes and stockpiled under the desert sun. It is a raw, natural salt that is high in sodium chloride and low in moisture.</p>
+          <ul class="checks">
+            <li><svg><use href="#i-check"/></svg>More than 99% sodium chloride, with moisture between 0.5% and 1.5%</li>
+            <li><svg><use href="#i-check"/></svg>Naturally white colour</li>
+            <li><svg><use href="#i-check"/></svg>Screened to the grain size your application needs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mint" id="products">
+      <div class="container">
+        <div class="products-intro">
+          <div class="section-head reveal">
+            <span class="eyebrow">Our products</span>
+            <h2>We meet all your salt needs</h2>
+            <p>With our products and integrated solutions, we respond to our customers’ needs. We support our commercial clients in creating economic value and make a positive contribution to the lives of our customers.</p>
+          </div>
+          <ul class="checks reveal">
+            <li><svg><use href="#i-check"/></svg>Specifications, grain sizes, packages and additives available upon customer’s request</li>
+            <li><svg><use href="#i-check"/></svg>We would be happy to provide you with a sample</li>
+            <li><svg><use href="#i-check"/></svg>Available in rock salt and sea salt</li>
+          </ul>
+        </div>
+        <div class="cards">
+          <article class="card reveal">
+            <img src="assets/photos/coarse-rock-salt.jpg" alt="Stockpiles of crushed salt" loading="lazy">
+            <div class="card__body">
+              <h3>Washed &amp; Crushed Salt</h3>
+              <button class="text-link" type="button" data-quote="Washed &amp; Crushed Salt">Request a quote <svg><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="card reveal">
+            <img src="assets/photos/refined-salt.jpg" alt="Sieved white salt crystals" loading="lazy">
+            <div class="card__body">
+              <h3>Washed, Crushed &amp; Sieved Salt</h3>
+              <button class="text-link" type="button" data-quote="Washed, Crushed &amp; Sieved Salt">Request a quote <svg><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="card reveal">
+            <img src="assets/photos/white-stockpiles.jpg" alt="White salt stockpiles" loading="lazy">
+            <div class="card__body">
+              <h3>Fine &amp; Coarse Industrial Salt</h3>
+              <button class="text-link" type="button" data-quote="Fine &amp; Coarse Industrial Salt">Request a quote <svg><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="card reveal">
+            <img src="assets/photos/salt-tablets.jpg" alt="Pressed white salt tablets" loading="lazy">
+            <div class="card__body">
+              <h3>Water Softener Tablet Salt</h3>
+              <button class="text-link" type="button" data-quote="Water Softener Tablet Salt">Request a quote <svg><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="card reveal">
+            <img src="assets/photos/salt-texture.jpg" alt="Fine white high-purity salt" loading="lazy">
+            <div class="card__body">
+              <h3>High Purity Sodium Chloride <span>(Vacuum Salt)</span></h3>
+              <button class="text-link" type="button" data-quote="High Purity Sodium Chloride (Vacuum Salt)">Request a quote <svg><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="card reveal">
+            <img src="assets/photos/salt-in-hand.jpg" alt="White salt crystals held in a hand" loading="lazy">
+            <div class="card__body">
+              <h3>Table &amp; Kitchen Salt <span>(Refined)</span></h3>
+              <button class="text-link" type="button" data-quote="Table &amp; Kitchen Salt (Refined)">Request a quote <svg><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="specifications">
+      <div class="container specs">
+        <div class="reveal">
+          <div class="section-head">
+            <span class="eyebrow">Specifications</span>
+            <h2>Siwa Oasis rock salt at a glance</h2>
+          </div>
+          <dl class="spec-facts">
+            <div><dt>Purity</dt><dd>Minimum 99% NaCl</dd></div>
+            <div><dt>Moisture</dt><dd>Less than 1.5%</dd></div>
+            <div><dt>Colour</dt><dd>White</dd></div>
+            <div><dt>Sieve</dt><dd>Any grain size, screened to order</dd></div>
+            <div><dt>Price</dt><dd>Quoted by sieve, packaging and quantity</dd></div>
+            <div><dt>Payment</dt><dd>Irrevocable confirmed LC at sight</dd></div>
+          </dl>
+        </div>
+        <div class="table-card reveal">
+          <h3>Typical rock salt analysis</h3>
+          <table>
+            <thead><tr><th scope="col">Item</th><th scope="col">Result</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Purity <span>(NaCl, dry basis)</span></th><td>99.05%</td></tr>
+              <tr><th scope="row">Moisture</th><td>1%</td></tr>
+              <tr><th scope="row">Water-insoluble matter</th><td>0.18%</td></tr>
+              <tr><th scope="row">Calcium <span>(Ca²⁺)</span></th><td>0.128%</td></tr>
+              <tr><th scope="row">Magnesium <span>(Mg²⁺)</span></th><td>0.07%</td></tr>
+              <tr><th scope="row">Sulphate <span>(SO₄²⁻)</span></th><td>0.14%</td></tr>
+              <tr><th scope="row">Bicarbonate <span>(HCO₃⁻)</span></th><td>0.043%</td></tr>
+              <tr><th scope="row">Carbonate <span>(CO₃²⁻)</span></th><td>Absent</td></tr>
+              <tr><th scope="row">Calcium carbonate <span>(CaCO₃)</span></th><td>Absent</td></tr>
+              <tr><th scope="row">Calcium bicarbonate <span>(Ca(HCO₃)₂)</span></th><td>0.032%</td></tr>
+              <tr><th scope="row">Calcium sulphate <span>(CaSO₄)</span></th><td>0.048%</td></tr>
+              <tr><th scope="row">Magnesium sulphate <span>(MgSO₄)</span></th><td>0.17%</td></tr>
+              <tr><th scope="row">Magnesium chloride <span>(MgCl₂)</span></th><td>0.0137%</td></tr>
+              <tr><th scope="row">Other</th><td>0.019%</td></tr>
+            </tbody>
+          </table>
+          <p>Typical values. Results vary by lot; an analysis for your order is provided on request.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mint" id="supply">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Supply</span>
+          <h2>Two ways to receive your salt</h2>
+          <p>From a single container of retail bags to a full bulk vessel.</p>
+        </div>
+        <div class="supply-grid">
+          <article class="panel reveal">
+            <img src="assets/photos/jumbo-bags-vessel.jpg" alt="Jumbo bags of rock salt loaded in a vessel hold" loading="lazy">
+            <h3>Packed supply</h3>
+            <p>Retail bags and jumbo bags, for smaller orders and easy handling on arrival.</p>
+            <ul class="tags">
+              <li>5 kg</li>
+              <li>10 kg</li>
+              <li>25 kg</li>
+              <li>Big bags</li>
+            </ul>
+          </article>
+          <article class="panel reveal">
+            <img src="assets/photos/loader-stockpile.jpg" alt="Wheel loader working a rock salt stockpile" loading="lazy">
+            <h3>Bulk supply</h3>
+            <p>Loose rock salt for commercial use, shipped by vessel.</p>
+            <ul class="tags">
+              <li>From 12,500 MT per vessel</li>
+              <li>FOB</li>
+            </ul>
+          </article>
+        </div>
+        <div class="features">
+          <div class="feature reveal">
+            <div class="feature__icon"><svg><use href="#i-ship"/></svg></div>
+            <h3>Shipping and chartering</h3>
+            <p>More than a salt supplier: ship chartering and shipping services are arranged alongside your order.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon"><svg><use href="#i-box"/></svg></div>
+            <h3>Vessels and containers</h3>
+            <p>Bulk cargo in a range of vessel sizes, or containers for bagged product.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon"><svg><use href="#i-globe"/></svg></div>
+            <h3>Export markets</h3>
+            <p>Siwa de-icing salt is shipped to Europe, Canada and the USA.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="gallery" aria-label="Gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">On site</span>
+          <h2>From lake to stockpile</h2>
+        </div>
+        <div class="gallery reveal">
+          <img class="wide tall" src="assets/photos/lake-stockpiles.jpg" alt="Salt stockpiles beside a turquoise lake" loading="lazy">
+          <img src="assets/photos/screening-plant.jpg" alt="Screening plant and conveyor" loading="lazy">
+          <img src="assets/photos/loader-bucket.jpg" alt="Loader carrying a bucket of salt" loading="lazy">
+          <img class="wide" src="assets/photos/processing-line.jpg" alt="Salt processing line" loading="lazy">
+          <img src="assets/photos/white-stockpiles.jpg" alt="White salt stockpiles" loading="lazy">
+          <img src="assets/photos/excavator.jpg" alt="Excavator at a salt stockpile" loading="lazy">
+          <img class="wide" src="assets/photos/stockpile-reflection.jpg" alt="Salt stockpile reflected in a lake" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <img src="assets/photos/turquoise-lake.jpg" alt="" loading="lazy">
+      <div class="container">
+        <h2>Let’s Talk Salt</h2>
+        <p>Tell us the grade, packaging and quantity you need and we’ll come back with a quote.</p>
+        <button class="btn btn--lg" type="button" data-quote>Request a Quote <svg><use href="#i-arrow"/></svg></button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a class="logo" href="#top" aria-label="Salt Bridge Minerals home">
+        <img src="assets/salt-bridge-minerals-wide.png" alt="Salt Bridge Minerals" width="953" height="220">
+      </a>
+      <nav class="nav" aria-label="Footer">
+        <ul>
+          <li><a href="#source">Source</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#specifications">Specifications</a></li>
+          <li><a href="#supply">Supply</a></li>
+        </ul>
+      </nav>
+      <small>© 2026 Salt Bridge Minerals</small>
+    </div>
+  </footer>
+
+  <dialog id="quote-dialog" aria-labelledby="quote-title">
+    <form class="quote" id="quote-form">
+      <div class="quote__head">
+        <div>
+          <h2 id="quote-title">Request a Quote</h2>
+          <p>Tell us what you need and we’ll follow up.</p>
+        </div>
+        <button class="quote__close" type="button" aria-label="Close" data-close><svg><use href="#i-close"/></svg></button>
+      </div>
+      <div class="quote__grid">
+        <div class="field"><label for="q-name">Name</label><input id="q-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="q-company">Company</label><input id="q-company" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="q-email">Email</label><input id="q-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field">
+          <label for="q-topic">Product</label>
+          <select id="q-topic" name="topic">
+            <option>Washed &amp; Crushed Salt</option>
+            <option>Washed, Crushed &amp; Sieved Salt</option>
+            <option>Fine &amp; Coarse Industrial Salt</option>
+            <option>Water Softener Tablet Salt</option>
+            <option>High Purity Sodium Chloride (Vacuum Salt)</option>
+            <option>Table &amp; Kitchen Salt (Refined)</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="q-supply">Supply</label>
+          <select id="q-supply" name="supply">
+            <option>Bulk vessel</option>
+            <option>Jumbo bags</option>
+            <option>Retail bags (5 / 10 / 25 kg)</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field"><label for="q-qty">Quantity</label><input id="q-qty" name="quantity" placeholder="e.g. 25,000 MT"></div>
+        <div class="field field--full"><label for="q-details">Details</label><textarea id="q-details" name="details" placeholder="Grain size, destination port, timing…"></textarea></div>
+      </div>
+      <div class="quote__foot">
+        <button class="btn" type="submit">Send Request <svg><use href="#i-arrow"/></svg></button>
+        <p class="quote__status" id="quote-status" role="status"></p>
+      </div>
+    </form>
+  </dialog>
+
+  <script>
+    // Set to Salt Bridge Minerals’ sales address to enable the quote form (opens the visitor's mail app).
+    // Left empty on purpose: Salt Bridge Minerals’ contact details have not been supplied yet.
+    const QUOTE_EMAIL = '';
+
+    document.documentElement.classList.add('js');
+
+    const header = document.querySelector('.site-header');
+    const dialog = document.getElementById('quote-dialog');
+    const form = document.getElementById('quote-form');
+    const status = document.getElementById('quote-status');
+    const nav = document.getElementById('site-nav');
+    const navToggle = document.querySelector('.nav-toggle');
+
+    const onScroll = () => header.classList.toggle('is-stuck', window.scrollY > 8);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const closeNav = () => { nav.classList.remove('is-open'); navToggle.setAttribute('aria-expanded', 'false'); };
+    navToggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+    nav.addEventListener('click', (e) => { if (e.target.closest('a')) closeNav(); });
+
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      reveals.forEach((el) => io.observe(el));
+    } else {
+      reveals.forEach((el) => el.classList.add('is-visible'));
+    }
+
+    document.querySelectorAll('[data-quote]').forEach((el) => {
+      el.addEventListener('click', () => {
+        closeNav();
+        if (el.dataset.quote) form.topic.value = el.dataset.quote;
+        status.textContent = '';
+        dialog.showModal();
+      });
+    });
+    dialog.querySelector('[data-close]').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (!QUOTE_EMAIL) {
+        status.textContent = 'This form isn’t connected yet — contact details are still being confirmed.';
+        return;
+      }
+      const d = new FormData(form);
+      const body = `Name: ${d.get('name')}\nCompany: ${d.get('company')}\nEmail: ${d.get('email')}\nProduct: ${d.get('topic')}\nSupply: ${d.get('supply')}\nQuantity: ${d.get('quantity')}\n\n${d.get('details')}`;
+      location.href = `mailto:${QUOTE_EMAIL}?subject=${encodeURIComponent('Quote request — ' + d.get('topic'))}&body=${encodeURIComponent(body)}`;
+      status.textContent = 'Opening your email app…';
+    });
+  </script>
+</body>
+</html>

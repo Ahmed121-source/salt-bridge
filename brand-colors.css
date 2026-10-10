@@ -1,0 +1,11 @@
+:root {
+  --salt-teal: #019897;
+  --salt-deep-blue: #073948;
+  --salt-heading: #000A2B;
+  --salt-mint: #F4FDFB;
+  --salt-page-bg: #F1FDF9;
+  --salt-white: #FFFFFF;
+  /* Fallback only: original font family is unknown. */
+  --salt-font: Arial, sans-serif;
+}
+
