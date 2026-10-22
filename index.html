@@ -122,6 +122,12 @@
     .split__media img + img { position: absolute; right: -18px; bottom: -32px; width: 44%; aspect-ratio: 1; border: 6px solid var(--salt-white); box-shadow: var(--shadow); }
     .split h2 { margin-top: 14px; font-size: clamp(2rem, 4.4vw, 3.25rem); }
     .split p { margin-top: 18px; }
+    .split .tags { margin: 22px 0 0; }
+    .split__media--product { margin: 0; padding: clamp(24px, 4vw, 48px); background: var(--salt-page-bg); border-radius: var(--radius); text-align: center; }
+    .split__media--product img { width: auto; max-width: 100%; max-height: 560px; aspect-ratio: auto; margin-inline: auto; object-fit: contain; border-radius: 0; filter: drop-shadow(0 18px 30px rgba(7, 57, 72, .18)); }
+    .split__media--product figcaption { margin-top: 20px; color: var(--salt-heading); font-size: 1.0625rem; }
+    .split .btn { margin-top: 28px; }
+    .checks strong { font-weight: 600; }
     .checks { display: grid; gap: 12px; margin-top: 26px; }
     .checks li { display: flex; gap: 12px; align-items: flex-start; color: var(--salt-heading); font-weight: 400; line-height: 1.4; }
     .checks svg { flex: none; width: 24px; height: 24px; padding: 5px; border-radius: 50%; background: var(--tint); color: var(--salt-teal); }
@@ -349,6 +355,7 @@
           <li><a href="#source">Source</a></li>
           <li><a href="#process">Process</a></li>
           <li><a href="#products">Products</a></li>
+          <li><a href="#distribution">US Distribution</a></li>
           <li><a href="#applications">Applications</a></li>
           <li><a href="#specifications">Specifications</a></li>
           <li><a href="#supply">Supply</a></li>
@@ -551,6 +558,34 @@
       </div>
     </section>
 
+    <section class="section" id="distribution">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">US Distribution</span>
+          <h2>Imported direct. Distributed across the US.</h2>
+          <p>Salt Bridge Global imports rock salt directly from the Siwa Oasis and distributes it within the United States from our base in Brooklyn, New York. Because we control the supply from source to pallet, we offer consistent quality, dependable stock through the winter season and competitive pricing.</p>
+          <ul class="checks">
+            <li><svg><use href="#i-check"/></svg><span><strong>Government contractors:</strong> distributors holding state, county and municipal road-salt contracts</span></li>
+            <li><svg><use href="#i-check"/></svg>Wholesale and regional distributors</li>
+            <li><svg><use href="#i-check"/></svg>Hardware, garden and home-improvement retailers</li>
+            <li><svg><use href="#i-check"/></svg>Landscaping and snow-removal contractors</li>
+            <li><svg><use href="#i-check"/></svg>Property managers and facilities</li>
+          </ul>
+          <p>We supply distributors serving state and municipal road-salt contracts with the volume, consistent quality and documentation that public tenders require.</p>
+          <ul class="tags">
+            <li>20 lb bags</li>
+            <li>50 lb bags</li>
+            <li>By the pallet or truckload</li>
+          </ul>
+          <button class="btn btn--lg" type="button" data-quote="De-icing Rock Salt">Become a Distributor <svg><use href="#i-arrow"/></svg></button>
+        </div>
+        <figure class="split__media split__media--product reveal">
+          <img src="assets/photos/polar-path-bag.png" alt="Polar Path Premium Rock Salt Ice Melt bag" width="728" height="920" loading="lazy">
+          <figcaption><strong>Polar Path®</strong> Premium Rock Salt Ice Melt</figcaption>
+        </figure>
+      </div>
+    </section>
+
     <section class="section" id="applications">
       <div class="container">
         <div class="section-head reveal">
@@ -586,7 +621,7 @@
       <img src="assets/photos/stockpile-reflection.jpg" alt="" loading="lazy">
       <div class="container reveal">
         <span class="eyebrow">Export</span>
-        <h2>De-icing salt shipped to Europe, Canada and the USA</h2>
+        <h2>De-icing salt shipped to the USA, Canada and Europe</h2>
         <a class="btn btn--lg btn--light" href="#supply">See supply options</a>
       </div>
     </section>
@@ -678,7 +713,7 @@
           <div class="feature reveal">
             <div class="feature__icon"><svg><use href="#i-globe"/></svg></div>
             <h3>Export markets</h3>
-            <p>Siwa de-icing salt is shipped to Europe, Canada and the USA.</p>
+            <p>Siwa de-icing salt is shipped to the USA, Canada and Europe.</p>
           </div>
         </div>
       </div>
