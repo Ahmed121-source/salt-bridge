@@ -80,11 +80,12 @@
     /* Header: white, so the supplied white-background logo sits cleanly */
     .site-header { position: sticky; top: 0; z-index: 50; height: var(--header-h); background: rgba(255, 255, 255, .94); backdrop-filter: blur(10px); border-bottom: 1px solid transparent; transition: border-color .2s, box-shadow .2s; }
     .site-header.is-stuck { border-color: var(--line); box-shadow: 0 6px 24px rgba(7, 57, 72, .06); }
-    .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 100%; }
+    .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 100%; max-width: calc(1440px + 2 * var(--gutter)); }
     .logo { flex: none; display: inline-flex; align-items: center; }
     .logo img { height: 72px; width: auto; }
     .nav { display: flex; align-items: center; gap: clamp(18px, 1.9vw, 24px); }
     .nav ul { display: flex; gap: clamp(18px, 1.9vw, 24px); }
+    .nav a, .nav .btn { white-space: nowrap; }
     .nav a:not(.btn) { color: var(--salt-heading); font-size: 1rem; font-weight: 400; padding-block: 6px; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
     .nav a:not(.btn):hover { color: var(--salt-teal); border-color: var(--salt-teal); }
     .nav-toggle { display: none; width: 46px; height: 46px; border: 0; border-radius: 50%; background: var(--tint); color: var(--salt-heading); cursor: pointer; }
@@ -293,7 +294,7 @@
       .split__media { margin-bottom: 32px; }
       .gallery, .tiles { grid-template-columns: repeat(2, 1fr); }
     }
-    @media (max-width: 1280px) {
+    @media (max-width: 1440px) {
       :root { --header-h: 78px; }
       .logo img { height: 52px; }
       .nav-toggle { display: grid; place-items: center; }
@@ -579,6 +580,7 @@
           <ul class="tags">
             <li>20 lb bags</li>
             <li>50 lb bags</li>
+            <li>55 lb bags</li>
             <li>By the pallet or truckload</li>
           </ul>
           <button class="btn btn--lg" type="button" data-quote="De-icing Rock Salt">Become a Distributor <svg><use href="#i-arrow"/></svg></button>
