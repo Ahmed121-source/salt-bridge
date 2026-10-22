@@ -274,6 +274,7 @@
     .quote__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
     .field { display: grid; gap: 6px; }
     .field--full { grid-column: 1 / -1; }
+    .field__note { color: #5c7480; font-size: .8125rem; line-height: 1.4; }
     .field label { color: var(--salt-heading); font-size: .9375rem; font-weight: 500; }
     .field input, .field select, .field textarea { width: 100%; padding: .7em .9em; border: 1.5px solid #cfe6e1; border-radius: 10px; background: var(--salt-mint); color: var(--salt-heading); font: 400 1rem/1.4 var(--font); }
     .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--salt-teal); background: var(--salt-white); }
@@ -490,7 +491,7 @@
               </ul>
               <p class="card__meta"><strong>Grades:</strong> Highway Rock Salt · Premium Rock Salt · Commercial Ice Melt · Industrial Ice Melt</p>
               <p class="card__meta"><strong>Graded by market:</strong> USA (medium) · Canada (coarse) · Europe (fine), or to your specification</p>
-              <button class="text-link" type="button" data-quote="De-icing Rock Salt">Request a quote <svg><use href="#i-arrow"/></svg></button>
+              <button class="text-link" type="button" data-quote="Deicing Rock Salt">Request a quote <svg><use href="#i-arrow"/></svg></button>
             </div>
           </article>
           <article class="card reveal">
@@ -506,7 +507,7 @@
             <div class="card__body">
               <h3>Washed, Crushed &amp; Sieved Salt</h3>
               <p>Washed, crushed and screened to the grain size you specify.</p>
-              <button class="text-link" type="button" data-quote="Washed, Crushed &amp; Sieved Salt">Request a quote <svg><use href="#i-arrow"/></svg></button>
+              <button class="text-link" type="button" data-quote="Washed, Crushed &amp; Screened Salt">Request a quote <svg><use href="#i-arrow"/></svg></button>
             </div>
           </article>
           <article class="card reveal">
@@ -535,7 +536,7 @@
             <div class="card__body">
               <h3>High Purity Sodium Chloride <span>(Vacuum Salt)</span></h3>
               <p>Refined to the highest purity levels for demanding industrial and pharmaceutical uses.</p>
-              <button class="text-link" type="button" data-quote="High Purity Sodium Chloride (Vacuum Salt)">Request a quote <svg><use href="#i-arrow"/></svg></button>
+              <button class="text-link" type="button" data-quote="High-Purity Sodium Chloride (Vacuum Salt)">Request a quote <svg><use href="#i-arrow"/></svg></button>
             </div>
           </article>
           <article class="card reveal">
@@ -583,7 +584,7 @@
             <li>55 lb bags</li>
             <li>By the pallet or truckload</li>
           </ul>
-          <button class="btn btn--lg" type="button" data-quote="De-icing Rock Salt">Become a Distributor <svg><use href="#i-arrow"/></svg></button>
+          <button class="btn btn--lg" type="button" data-quote="Deicing Rock Salt">Become a Distributor <svg><use href="#i-arrow"/></svg></button>
         </div>
         <figure class="split__media split__media--product reveal">
           <img src="assets/photos/polar-path-bag.png" alt="Polar Path Premium Rock Salt Ice Melt bag" width="728" height="920" loading="lazy">
@@ -763,7 +764,7 @@
         <span class="eyebrow">Pre-season orders</span>
         <h2>Secure your winter supply</h2>
         <p>Lock in pricing and delivery dates before the season starts, while stock and shipping space are available.</p>
-        <button class="btn btn--lg btn--light" type="button" data-quote="De-icing Rock Salt">Reserve Your Supply <svg><use href="#i-arrow"/></svg></button>
+        <button class="btn btn--lg btn--light" type="button" data-quote="Deicing Rock Salt">Reserve Your Supply <svg><use href="#i-arrow"/></svg></button>
       </div>
     </section>
 
@@ -833,16 +834,17 @@
         <div class="field">
           <label for="q-topic">Product</label>
           <select id="q-topic" name="topic">
-            <option>De-icing Rock Salt</option>
+            <option>Deicing Rock Salt</option>
             <option>Washed &amp; Crushed Salt</option>
-            <option>Washed, Crushed &amp; Sieved Salt</option>
+            <option>Washed, Crushed &amp; Screened Salt</option>
             <option>Fine &amp; Coarse Industrial Salt</option>
             <option>Water Softener Tablet Salt</option>
-            <option>High Purity Sodium Chloride (Vacuum Salt)</option>
+            <option>High-Purity Sodium Chloride (Vacuum Salt)</option>
             <option>Table &amp; Kitchen Salt (Refined)</option>
             <option>Sea Salt</option>
             <option>Other</option>
           </select>
+          <p class="field__note">Availability, specifications and food-grade compliance are confirmed with each quote.</p>
         </div>
         <div class="field">
           <label for="q-supply">Supply</label>
