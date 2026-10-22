@@ -123,6 +123,9 @@
     .split h2 { margin-top: 14px; font-size: clamp(2rem, 4.4vw, 3.25rem); }
     .split p { margin-top: 18px; }
     .split .tags { margin: 22px 0 0; }
+    .split .route { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; margin-top: 20px; padding: 10px 18px; border-radius: 999px; background: var(--tint); color: var(--salt-heading); font-weight: 600; }
+    .route svg { width: 18px; height: 18px; color: var(--salt-teal); }
+    .route em { padding-left: 12px; border-left: 1px solid var(--line); color: var(--salt-teal); font-style: normal; font-weight: 500; font-size: .9375rem; }
     .split__media--product { margin: 0; padding: clamp(24px, 4vw, 48px); background: var(--salt-page-bg); border-radius: var(--radius); text-align: center; }
     .split__media--product img { width: auto; max-width: 100%; max-height: 560px; aspect-ratio: auto; margin-inline: auto; object-fit: contain; border-radius: 0; filter: drop-shadow(0 18px 30px rgba(7, 57, 72, .18)); }
     .split__media--product figcaption { margin-top: 20px; color: var(--salt-heading); font-size: 1.0625rem; }
@@ -563,6 +566,7 @@
         <div class="reveal">
           <span class="eyebrow">US Distribution</span>
           <h2>Imported direct. Distributed across the US.</h2>
+          <p class="route"><span>Siwa Oasis, Egypt</span><svg aria-hidden="true"><use href="#i-arrow"/></svg><span>Brooklyn, NY</span><em>Direct import</em></p>
           <p>Salt Bridge Global imports rock salt directly from the Siwa Oasis and distributes it within the United States from our base in Brooklyn, New York. Because we control the supply from source to pallet, we offer consistent quality, dependable stock through the winter season and competitive pricing.</p>
           <ul class="checks">
             <li><svg><use href="#i-check"/></svg><span><strong>Government contractors:</strong> distributors holding state, county and municipal road-salt contracts</span></li>
@@ -751,6 +755,16 @@
       </div>
     </section>
 
+    <section class="cta cta--band">
+      <img src="assets/photos/white-stockpiles.jpg" alt="" loading="lazy">
+      <div class="container reveal">
+        <span class="eyebrow">Pre-season orders</span>
+        <h2>Secure your winter supply</h2>
+        <p>Lock in pricing and delivery dates before the season starts, while stock and shipping space are available.</p>
+        <button class="btn btn--lg btn--light" type="button" data-quote="De-icing Rock Salt">Reserve Your Supply <svg><use href="#i-arrow"/></svg></button>
+      </div>
+    </section>
+
     <section class="section" id="gallery" aria-label="Gallery">
       <div class="container">
         <div class="section-head reveal">
@@ -838,6 +852,18 @@
           </select>
         </div>
         <div class="field"><label for="q-qty">Quantity</label><input id="q-qty" name="quantity" placeholder="e.g. 30,000 MT"></div>
+        <div class="field">
+          <label for="q-pallets">Pallets needed</label>
+          <select id="q-pallets" name="pallets">
+            <option>Not applicable (bulk)</option>
+            <option>Under 10</option>
+            <option>10–50</option>
+            <option>50–100</option>
+            <option>100–500</option>
+            <option>500+</option>
+          </select>
+        </div>
+        <div class="field field--full"><label for="q-location">Delivery state or country</label><input id="q-location" name="location" placeholder="e.g. New York, or destination port"></div>
         <div class="field field--full"><label for="q-details">Details</label><textarea id="q-details" name="details" placeholder="Grain size, destination port, timing…"></textarea></div>
       </div>
       <div class="quote__foot">
@@ -939,7 +965,7 @@
         return;
       }
       const d = new FormData(form);
-      const body = `Name: ${d.get('name')}\nCompany: ${d.get('company')}\nEmail: ${d.get('email')}\nProduct: ${d.get('topic')}\nSupply: ${d.get('supply')}\nQuantity: ${d.get('quantity')}\n\n${d.get('details')}`;
+      const body = `Name: ${d.get('name')}\nCompany: ${d.get('company')}\nEmail: ${d.get('email')}\nProduct: ${d.get('topic')}\nSupply: ${d.get('supply')}\nQuantity: ${d.get('quantity')}\nPallets needed: ${d.get('pallets')}\nDelivery: ${d.get('location')}\n\n${d.get('details')}`;
       location.href = `mailto:${QUOTE_EMAIL}?subject=${encodeURIComponent('Quote request — ' + d.get('topic'))}&body=${encodeURIComponent(body)}`;
       status.textContent = 'Opening your email app…';
     });
