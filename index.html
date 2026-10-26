@@ -120,6 +120,8 @@
     /* Source */
     .split { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(32px, 6vw, 88px); }
     .split__media { position: relative; }
+    #source .split { grid-template-columns: 1.3fr 1fr; }
+    #source .split__media > img:first-child { aspect-ratio: 5 / 4; }
     .split__media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
     .split__media img + img { position: absolute; right: -18px; bottom: -32px; width: 44%; aspect-ratio: 1; border: 6px solid var(--salt-white); box-shadow: var(--shadow); }
     .split h2 { margin-top: 14px; font-size: clamp(2rem, 4.4vw, 3.25rem); }
