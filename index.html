@@ -297,7 +297,7 @@
     .site-footer small { color: #5c7480; font-size: .9375rem; }
 
     /* Quote dialog */
-    dialog { width: min(560px, calc(100vw - 32px)); padding: 0; border: 0; border-radius: 20px; background: var(--salt-white); color: var(--body-ink); box-shadow: 0 30px 80px rgba(0, 10, 43, .35); }
+    dialog { width: min(640px, calc(100vw - 32px)); padding: 0; border: 0; border-radius: 20px; background: var(--salt-white); color: var(--body-ink); box-shadow: 0 30px 80px rgba(0, 10, 43, .35); }
     dialog::backdrop { background: rgba(0, 10, 43, .55); backdrop-filter: blur(3px); }
     .quote { padding: clamp(24px, 5vw, 36px); }
     .quote__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
@@ -305,13 +305,16 @@
     .quote__head p { margin-top: 6px; font-size: 1.0625rem; }
     .quote__close { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border: 0; border-radius: 50%; background: var(--tint); color: var(--salt-heading); cursor: pointer; }
     .quote__close svg { width: 18px; height: 18px; }
-    .quote__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 22px; }
-    .field { display: grid; gap: 6px; }
+    .quote__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 18px; margin-top: 22px; align-items: start; }
+    .field { display: grid; gap: 6px; align-content: start; }
+    .quote__grid > .field__note { margin-top: -8px; }
     .field--full { grid-column: 1 / -1; }
     .field__optional { color: #5c7480; font-weight: 400; }
     .field__note { color: #5c7480; font-size: .8125rem; line-height: 1.4; }
     .field label { color: var(--salt-heading); font-size: .9375rem; font-weight: 500; }
     .field input, .field select, .field textarea { width: 100%; padding: .7em .9em; border: 1.5px solid #cfe6e1; border-radius: 10px; background: var(--salt-mint); color: var(--salt-heading); font: 400 1rem/1.4 var(--font); }
+    .field input, .field select { height: 48px; }
+    .field select { padding-block: 0; text-overflow: ellipsis; }
     .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--salt-teal); background: var(--salt-white); }
     .field textarea { min-height: 96px; resize: vertical; }
     .quote__foot { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 22px; }
@@ -947,7 +950,6 @@
             <option>Sea Salt</option>
             <option>Other</option>
           </select>
-          <p class="field__note">Availability, specifications and food-grade compliance are confirmed with each quote.</p>
         </div>
         <div class="field">
           <label for="q-supply">Supply</label>
@@ -958,7 +960,8 @@
             <option>Not sure yet</option>
           </select>
         </div>
-        <div class="field"><label for="q-qty">Quantity</label><input id="q-qty" name="quantity" placeholder="e.g. 2 containers, or 30,000 MT"></div>
+        <p class="field__note field--full">Availability, specifications and food-grade compliance are confirmed with each quote.</p>
+        <div class="field"><label for="q-qty">Quantity</label><input id="q-qty" name="quantity" placeholder="2 containers or 30,000 MT"></div>
         <div class="field">
           <label for="q-pallets">Pallets needed</label>
           <select id="q-pallets" name="pallets">
