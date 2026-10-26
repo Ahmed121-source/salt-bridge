@@ -88,7 +88,7 @@
     .site-header .nav ul a:not(.btn) { font-size: .9375rem; }
     .nav a, .nav .btn { white-space: nowrap; }
     .nav a:not(.btn) { color: var(--salt-heading); font-size: 1rem; font-weight: 400; padding-block: 6px; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
-    .nav a:not(.btn):hover { color: var(--salt-teal); border-color: var(--salt-teal); }
+    .nav a:not(.btn):hover, .nav a.is-current { color: var(--salt-teal); border-color: var(--salt-teal); }
     .nav-toggle { display: none; width: 46px; height: 46px; border: 0; border-radius: 50%; background: var(--tint); color: var(--salt-heading); cursor: pointer; }
     .nav-toggle svg { width: 22px; height: 22px; }
 
@@ -1044,6 +1044,24 @@
     } else {
       reveals.forEach((el) => el.classList.add('is-visible'));
     }
+
+    // Highlight the menu link for the section currently in view.
+    const navLinks = [...nav.querySelectorAll('ul a[href^="#"]')];
+    const navSections = navLinks.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const setCurrentNav = () => {
+      const line = header.offsetHeight + window.innerHeight * 0.3;
+      let current = null;
+      navSections.forEach((sec) => { if (sec.getBoundingClientRect().top <= line) current = sec; });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) current = navSections[navSections.length - 1];
+      navLinks.forEach((a) => {
+        const on = current && a.getAttribute('href') === `#${current.id}`;
+        a.classList.toggle('is-current', on);
+        if (on) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+      });
+    };
+    window.addEventListener('scroll', setCurrentNav, { passive: true });
+    window.addEventListener('resize', setCurrentNav);
+    setCurrentNav();
 
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
