@@ -83,8 +83,8 @@
     .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 100%; max-width: calc(1440px + 2 * var(--gutter)); }
     .logo { flex: none; display: inline-flex; align-items: center; }
     .logo img { height: 72px; width: auto; }
-    .nav { display: flex; align-items: center; gap: clamp(18px, 1.9vw, 24px); }
-    .nav ul { display: flex; gap: clamp(18px, 1.9vw, 24px); }
+    .nav { display: flex; align-items: center; gap: clamp(16px, 1.5vw, 22px); }
+    .nav ul { display: flex; gap: clamp(16px, 1.5vw, 22px); }
     .nav a, .nav .btn { white-space: nowrap; }
     .nav a:not(.btn) { color: var(--salt-heading); font-size: 1rem; font-weight: 400; padding-block: 6px; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
     .nav a:not(.btn):hover { color: var(--salt-teal); border-color: var(--salt-teal); }
@@ -124,6 +124,9 @@
     .split h2 { margin-top: 14px; font-size: clamp(2rem, 4.4vw, 3.25rem); }
     .split p { margin-top: 18px; }
     .split .tags { margin: 22px 0 0; }
+    .about { align-items: start; }
+    .about .about__lead { font-size: 1.25rem; line-height: 1.5; color: var(--salt-heading); }
+    .about .split__media img { aspect-ratio: 4 / 5; }
     .split .route { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; margin-top: 20px; padding: 10px 18px; border-radius: 999px; background: var(--tint); color: var(--salt-heading); font-weight: 600; }
     .route svg { width: 18px; height: 18px; color: var(--salt-teal); }
     .route em { padding-left: 12px; border-left: 1px solid var(--line); color: var(--salt-teal); font-style: normal; font-weight: 500; font-size: .9375rem; }
@@ -295,7 +298,7 @@
       .split__media { margin-bottom: 32px; }
       .gallery, .tiles { grid-template-columns: repeat(2, 1fr); }
     }
-    @media (max-width: 1440px) {
+    @media (max-width: 1500px) {
       :root { --header-h: 78px; }
       .logo img { height: 52px; }
       .nav-toggle { display: grid; place-items: center; }
@@ -356,6 +359,7 @@
       </button>
       <nav class="nav" id="site-nav" aria-label="Primary">
         <ul>
+          <li><a href="#about">About</a></li>
           <li><a href="#source">Source</a></li>
           <li><a href="#process">Process</a></li>
           <li><a href="#products">Products</a></li>
@@ -397,7 +401,24 @@
       </div>
     </section>
 
-    <section class="section" id="source">
+    <section class="section" id="about">
+      <div class="container split about">
+        <div class="reveal">
+          <span class="eyebrow">About us</span>
+          <h2>Egyptian Salt. Global Supply.</h2>
+          <p class="about__lead">Salt Bridge Global supplies Egyptian salt products to distributors and commercial buyers across the United States, Canada and Europe. From premium Siwa Oasis rock salt for deicing and industrial applications to refined and specialty salts, we offer grades, grain sizes and packaging tailored to customer specifications.</p>
+          <p>Our Egyptian operations bring more than a decade of experience in salt production and worldwide exports. With our new office in New York, Salt Bridge Global is expanding its presence to provide closer customer support and coordinate supply for the U.S. market.</p>
+          <p>We serve wholesale distributors, snow-removal and landscaping contractors, retailers, schools, shopping centers, property managers and suppliers fulfilling government road-salt contracts.</p>
+          <p>Our product range includes washed and crushed rock salt, screened salt, fine and coarse industrial salt, water-softener tablets, high-purity vacuum salt, refined table salt and sea salt. Supply options include bulk vessel shipments, containerized cargo, jumbo bags and retail bags.</p>
+          <p>Our operations team coordinates inland transportation, warehousing, bagging, port handling and shipping, including bulk-vessel chartering arrangements. Whether you need bagged products for distribution or bulk salt for seasonal demand, we work with you to match the product, packaging and shipment to your requirements.</p>
+        </div>
+        <div class="split__media reveal">
+          <img src="assets/photos/processing-line.jpg" alt="Salt processing line" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mint" id="source">
       <div class="container split">
         <div class="split__media reveal">
           <img src="assets/photos/siwa-salt-lake.jpg" alt="Turquoise salt lake in the Siwa Oasis" loading="lazy">
@@ -575,6 +596,7 @@
             <li><svg><use href="#i-check"/></svg>Hardware, garden and home-improvement retailers</li>
             <li><svg><use href="#i-check"/></svg>Landscaping and snow-removal contractors</li>
             <li><svg><use href="#i-check"/></svg>Property managers and facilities</li>
+            <li><svg><use href="#i-check"/></svg>Schools and shopping centers</li>
           </ul>
           <p>We supply distributors serving state and municipal road-salt contracts with the volume, consistent quality and documentation that public tenders require.</p>
           <ul class="tags">
@@ -808,6 +830,7 @@
       </a>
       <nav class="nav" aria-label="Footer">
         <ul>
+          <li><a href="#about">About</a></li>
           <li><a href="#source">Source</a></li>
           <li><a href="#products">Products</a></li>
           <li><a href="#specifications">Specifications</a></li>
