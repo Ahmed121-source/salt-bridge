@@ -314,6 +314,8 @@
     .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--salt-teal); background: var(--salt-white); }
     .field textarea { min-height: 96px; resize: vertical; }
     .quote__foot { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 22px; }
+    .quote__status a { color: var(--salt-teal); text-decoration: underline; }
+    .btn:disabled { opacity: .6; cursor: wait; }
     .quote__status { flex: 1; min-width: 12em; color: var(--salt-deep-blue); font-size: .9375rem; font-weight: 400; line-height: 1.4; }
 
     /* Scroll reveal (only when JS is running) */
@@ -969,6 +971,7 @@
         <div class="field field--full"><label for="q-location">Delivery state or country</label><input id="q-location" name="location" placeholder="e.g. New York, or destination port"></div>
         <div class="field field--full"><label for="q-details">Details</label><textarea id="q-details" name="details" placeholder="Grain size, destination port, timing…"></textarea></div>
       </div>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;">
       <div class="quote__foot">
         <button class="btn" type="submit">Send Request <svg><use href="#i-arrow"/></svg></button>
         <p class="quote__status" id="quote-status" role="status"></p>
@@ -977,7 +980,7 @@
   </dialog>
 
   <script>
-    // Salt Bridge Global’s sales address; the quote form opens the visitor's mail app addressed to it.
+    // Salt Bridge Global’s sales address; quote requests are emailed here.
     const QUOTE_EMAIL = 'sales@saltbridgeglobal.com';
 
     document.documentElement.classList.add('js');
@@ -1099,16 +1102,42 @@
     dialog.querySelector('[data-close]').addEventListener('click', () => dialog.close());
     dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
 
-    form.addEventListener('submit', (e) => {
+    // Sends the request in the background through FormSubmit, which emails it to QUOTE_EMAIL.
+    const submitBtn = form.querySelector('[type="submit"]');
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      if (!QUOTE_EMAIL) {
-        status.textContent = 'This form isn’t connected yet — contact details are still being confirmed.';
-        return;
-      }
       const d = new FormData(form);
-      const body = `Name: ${d.get('name')}\nCompany: ${d.get('company')}\nEmail: ${d.get('email')}\nProduct: ${d.get('topic')}\nSupply: ${d.get('supply')}\nQuantity: ${d.get('quantity')}\nPallets needed: ${d.get('pallets')}\nDelivery: ${d.get('location')}\n\n${d.get('details')}`;
-      location.href = `mailto:${QUOTE_EMAIL}?subject=${encodeURIComponent('Quote request — ' + d.get('topic'))}&body=${encodeURIComponent(body)}`;
-      status.textContent = 'Opening your email app…';
+      if (d.get('_honey')) return;                      // spam bots fill the hidden field
+      submitBtn.disabled = true;
+      status.textContent = 'Sending your request…';
+      try {
+        const res = await fetch(`https://formsubmit.co/ajax/${QUOTE_EMAIL}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            Name: d.get('name'),
+            Company: d.get('company'),
+            Email: d.get('email'),
+            Product: d.get('topic'),
+            Supply: d.get('supply'),
+            Quantity: d.get('quantity'),
+            'Pallets needed': d.get('pallets'),
+            Delivery: d.get('location'),
+            Details: d.get('details'),
+            _subject: `Quote request — ${d.get('topic')}`,
+            _replyto: d.get('email'),
+            _template: 'table',
+          }),
+        });
+        const out = await res.json().catch(() => ({}));
+        if (!res.ok || String(out.success) === 'false') throw new Error(out.message || res.status);
+        form.reset();
+        status.textContent = 'Thank you — your request has been sent. Our team will get back to you shortly.';
+      } catch (err) {
+        status.innerHTML = 'Sorry, your request could not be sent. Please email <a href="mailto:sales@saltbridgeglobal.com">sales@saltbridgeglobal.com</a> or call <a href="tel:+19296943611">(929) 694-3611</a>.';
+      } finally {
+        submitBtn.disabled = false;
+      }
     });
   </script>
 </body>
