@@ -213,6 +213,22 @@
     .spec-facts > div { display: grid; grid-template-columns: 9.5em 1fr; gap: 16px; padding-block: 18px; border-top: 1px solid var(--line); }
     .spec-facts dt { color: var(--salt-teal); font-size: .9375rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding-top: .2em; }
     .spec-facts dd { color: var(--salt-heading); font-weight: 400; line-height: 1.45; }
+    .docs { display: grid; grid-template-rows: auto 1fr; overflow: hidden; border-radius: var(--radius); background: var(--salt-deep-blue); box-shadow: var(--shadow); }
+    .docs__text { padding: clamp(28px, 4vw, 44px); color: #d6f3ef; }
+    .docs__text .eyebrow { color: #a8ece6; }
+    .docs__text h3 { margin-top: 12px; color: var(--salt-white); font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.15; }
+    .docs__text p { margin-top: 12px; font-size: 1.0625rem; line-height: 1.5; }
+    .docs__text .btn { margin-top: 24px; }
+    .docs__art { position: relative; min-height: 300px; background: linear-gradient(135deg, var(--salt-teal), #0b7f86); overflow: hidden; }
+    .doc { position: absolute; display: grid; align-content: start; gap: 7px; width: 46%; aspect-ratio: 8.5 / 11; padding: 14px 14px 0; background: var(--salt-white); border-radius: 4px; box-shadow: 0 18px 40px rgba(0, 10, 43, .35); }
+    .doc img { width: 62%; height: auto; margin-bottom: 4px; }
+    .doc strong { color: var(--salt-heading); font-size: .8125rem; line-height: 1.2; padding-bottom: 6px; border-bottom: 2px solid var(--salt-teal); }
+    .doc i { display: block; height: 5px; border-radius: 3px; background: #dbe6ea; }
+    .doc i.short { width: 60%; }
+    .doc__label { margin-top: 4px; color: var(--salt-teal); font-size: .625rem; font-weight: 600; letter-spacing: .02em; }
+    .doc--left { left: 6%; top: 18%; transform: rotate(-9deg); }
+    .doc--right { right: 6%; top: 16%; transform: rotate(8deg); }
+    .doc--front { left: 27%; top: 9%; z-index: 1; }
     .table-card { background: var(--salt-white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
     .table-card h3 { padding: 24px 28px 18px; font-size: 1.375rem; }
     table { width: 100%; border-collapse: collapse; font-size: 1.0625rem; }
@@ -469,7 +485,7 @@
           <h2>Naturally white salt from Egypt’s Western Desert</h2>
           <p>Our rock salt comes from salt production sites in Egypt’s Siwa Oasis, where it is harvested from naturally saline lakes and prepared for processing and shipment.</p>
           <ul class="checks">
-            <li><svg><use href="#i-check"/></svg>98% or more sodium chloride, with moisture of 1% or less</li>
+            <li><svg><use href="#i-check"/></svg>98.5% or more sodium chloride, with moisture of 1% or less</li>
             <li><svg><use href="#i-check"/></svg>Naturally white colour</li>
             <li><svg><use href="#i-check"/></svg>Screened to the grain size your application needs</li>
           </ul>
@@ -703,7 +719,7 @@
             <h2>Siwa Oasis rock salt at a glance</h2>
           </div>
           <dl class="spec-facts">
-            <div><dt>Purity</dt><dd>≥ 98% NaCl</dd></div>
+            <div><dt>Purity</dt><dd>≥ 98.5% NaCl</dd></div>
             <div><dt>Moisture</dt><dd>≤ 1%</dd></div>
             <div><dt>Capacity</dt><dd>3,000,000 MT per year, scalable on request</dd></div>
             <div><dt>Colour</dt><dd>White</dd></div>
@@ -712,28 +728,35 @@
             <div><dt>Payment</dt><dd>LC, wire transfer (T/T) or cash against documents, agreed per order</dd></div>
           </dl>
         </div>
-        <div class="table-card reveal">
-          <h3>Typical rock salt analysis</h3>
-          <table>
-            <thead><tr><th scope="col">Item</th><th scope="col">Result</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">Purity <span>(NaCl, dry basis)</span></th><td>99.05%</td></tr>
-              <tr><th scope="row">Moisture</th><td>1%</td></tr>
-              <tr><th scope="row">Water-insoluble matter</th><td>0.18%</td></tr>
-              <tr><th scope="row">Calcium <span>(Ca²⁺)</span></th><td>0.128%</td></tr>
-              <tr><th scope="row">Magnesium <span>(Mg²⁺)</span></th><td>0.07%</td></tr>
-              <tr><th scope="row">Sulphate <span>(SO₄²⁻)</span></th><td>0.14%</td></tr>
-              <tr><th scope="row">Bicarbonate <span>(HCO₃⁻)</span></th><td>0.043%</td></tr>
-              <tr><th scope="row">Carbonate <span>(CO₃²⁻)</span></th><td>Absent</td></tr>
-              <tr><th scope="row">Calcium carbonate <span>(CaCO₃)</span></th><td>Absent</td></tr>
-              <tr><th scope="row">Calcium bicarbonate <span>(Ca(HCO₃)₂)</span></th><td>0.032%</td></tr>
-              <tr><th scope="row">Calcium sulphate <span>(CaSO₄)</span></th><td>0.048%</td></tr>
-              <tr><th scope="row">Magnesium sulphate <span>(MgSO₄)</span></th><td>0.17%</td></tr>
-              <tr><th scope="row">Magnesium chloride <span>(MgCl₂)</span></th><td>0.0137%</td></tr>
-              <tr><th scope="row">Other</th><td>0.019%</td></tr>
-            </tbody>
-          </table>
-          <p>Typical values. Results vary by lot; an analysis for your order is provided on request.</p>
+        <div class="docs reveal">
+          <div class="docs__text">
+            <span class="eyebrow">Documentation</span>
+            <h3>Technical specifications &amp; chemical analysis</h3>
+            <p>To access the technical specifications, chemical analysis and safety data sheet for our products, please contact us.</p>
+            <button class="btn btn--lg" type="button" data-quote>Contact Us <svg><use href="#i-arrow"/></svg></button>
+          </div>
+          <div class="docs__art" aria-hidden="true">
+            <div class="doc doc--left">
+              <img src="assets/salt-bridge-global-wide@1x.png" alt="">
+              <strong>Certificate of Analysis</strong>
+              <i></i><i></i><i class="short"></i><i></i><i class="short"></i>
+            </div>
+            <div class="doc doc--right">
+              <img src="assets/salt-bridge-global-wide@1x.png" alt="">
+              <strong>Product Data Sheet</strong>
+              <i></i><i class="short"></i><i></i><i></i><i class="short"></i>
+            </div>
+            <div class="doc doc--front">
+              <img src="assets/salt-bridge-global-wide@1x.png" alt="">
+              <strong>Safety Data Sheet</strong>
+              <span class="doc__label">1. Product identification</span>
+              <i></i><i class="short"></i><i></i>
+              <span class="doc__label">2. Composition</span>
+              <i></i><i></i><i class="short"></i>
+              <span class="doc__label">3. Handling &amp; storage</span>
+              <i></i><i class="short"></i>
+            </div>
+          </div>
         </div>
       </div>
     </section>
