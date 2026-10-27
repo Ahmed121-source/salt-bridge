@@ -6,6 +6,14 @@
   <title>Salt Bridge Global — Deicing Rock Salt &amp; Ice Melt Supplier | Siwa Oasis, Egypt</title>
   <meta name="description" content="Salt Bridge Global supplies deicing rock salt, ice melt and bagged salt from the Siwa Oasis, Egypt: washed, crushed and sieved salt, industrial salt, water softener tablets, vacuum salt and refined table salt.">
   <link rel="canonical" href="https://saltbridgeglobal.com/">
+  <link rel="alternate" hreflang="en" href="https://saltbridgeglobal.com/">
+  <link rel="alternate" hreflang="nl" href="https://saltbridgeglobal.com/nl/">
+  <link rel="alternate" hreflang="de" href="https://saltbridgeglobal.com/de/">
+  <link rel="alternate" hreflang="sv" href="https://saltbridgeglobal.com/sv/">
+  <link rel="alternate" hreflang="pl" href="https://saltbridgeglobal.com/pl/">
+  <link rel="alternate" hreflang="it" href="https://saltbridgeglobal.com/it/">
+  <link rel="alternate" hreflang="cs" href="https://saltbridgeglobal.com/cs/">
+  <link rel="alternate" hreflang="x-default" href="https://saltbridgeglobal.com/">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png">
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
@@ -91,6 +99,28 @@
     .nav a:not(.btn):hover, .nav a.is-current { color: var(--salt-teal); border-color: var(--salt-teal); }
     .nav-toggle { display: none; width: 46px; height: 46px; border: 0; border-radius: 50%; background: var(--tint); color: var(--salt-heading); cursor: pointer; }
     .nav-toggle svg { width: 22px; height: 22px; }
+    .site-header .nav { margin-left: auto; }
+    /* Language menu */
+    .lang { position: relative; flex: none; }
+    .lang__btn { display: inline-flex; align-items: center; gap: 8px; height: 42px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--salt-white); color: var(--salt-heading); font: inherit; font-size: .875rem; font-weight: 600; cursor: pointer; }
+    .lang__btn:hover { border-color: var(--salt-teal); }
+    .lang__btn > svg { width: 12px; height: 12px; transition: transform .2s; }
+    .lang__btn[aria-expanded="true"] > svg { transform: rotate(180deg); }
+    .lang img { width: 24px; height: 16px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .1); }
+    .lang__menu { position: absolute; right: 0; top: calc(100% + 8px); z-index: 60; min-width: 200px; margin: 0; padding: 6px; list-style: none; background: var(--salt-white); border-radius: 14px; box-shadow: 0 20px 50px rgba(7, 57, 72, .18); }
+    .lang__menu[hidden] { display: none; }
+    .lang__menu a { display: flex; align-items: center; gap: 12px; padding: 9px 12px; border-radius: 10px; color: var(--salt-heading); text-decoration: none; font-size: .9375rem; }
+    .lang__menu a b { width: 24px; font-weight: 600; }
+    .lang__menu a:hover, .lang__menu a[aria-current] { background: var(--tint); }
+    /* Hamburger menu when the links do not fit on one line (longer languages) */
+    .site-header.is-compact .logo img { height: 52px; }
+    .site-header.is-compact .nav-toggle { display: grid; place-items: center; }
+    .site-header.is-compact .nav { display: none; position: absolute; top: calc(100% + 8px); left: var(--gutter); right: var(--gutter); flex-direction: column; align-items: stretch; gap: 16px; padding: 20px; background: var(--salt-white); border-radius: var(--radius); box-shadow: 0 20px 50px rgba(7, 57, 72, .18); }
+    .site-header.is-compact .nav.is-open { display: flex; }
+    .site-header.is-compact .nav ul { flex-direction: column; gap: 4px; }
+    .site-header.is-compact .nav ul a:not(.btn) { display: block; padding: 10px 4px; font-size: 1.125rem; }
+    .site-header.is-compact .lang { margin-left: auto; }
+    .site-header.is-compact .nav-toggle { order: 3; }
 
     /* Hero: full-screen media with centred title */
     .hero { position: relative; display: grid; min-height: min(calc(100vh - var(--header-h)), 1000px); min-height: min(calc(100svh - var(--header-h)), 1000px); overflow: hidden; background: var(--salt-deep-blue); color: var(--salt-white); }
@@ -305,6 +335,14 @@
     .cta__contact a { color: inherit; text-decoration: none; }
     .cta__contact small { display: block; margin-bottom: 4px; font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #a8ece6; }
     .cta__contact address + a { display: inline-block; margin-top: 4px; }
+    @media (max-width: 560px) {
+      .site-header .container { gap: 10px; }
+      .lang__btn { padding: 0 10px; gap: 6px; }
+      .lang__btn > span { display: none; }
+      .site-header .logo img { height: 44px; }
+    }
+    @media (max-width: 400px) { .site-header .logo img { height: 38px; } }
+    h1, h2, h3, .btn { overflow-wrap: break-word; }
     @media (max-width: 640px) { .cta__contact { flex-direction: column; align-items: flex-start; max-width: 320px; margin-inline: auto; } }
     .cta__contact a:hover { color: #a8ece6; }
     .cta--band h2 { max-width: 15em; margin-inline: auto; font-size: clamp(2rem, 4.8vw, 3.5rem); font-weight: 600; text-wrap: balance; }
@@ -358,7 +396,8 @@
     @media (max-width: 1500px) {
       :root { --header-h: 78px; }
       .logo img { height: 52px; }
-      .nav-toggle { display: grid; place-items: center; }
+      .nav-toggle { display: grid; place-items: center; order: 3; }
+      .lang { margin-left: auto; }
       .site-header .nav { display: none; position: absolute; top: calc(100% + 8px); left: var(--gutter); right: var(--gutter); flex-direction: column; align-items: stretch; gap: 16px; padding: 20px; background: var(--salt-white); border-radius: var(--radius); box-shadow: 0 20px 50px rgba(7, 57, 72, .18); }
       .site-header .nav.is-open { display: flex; }
       .site-header .nav ul { flex-direction: column; gap: 4px; }
@@ -435,6 +474,18 @@
         </ul>
         <button class="btn btn--sm" type="button" data-quote>Request a Quote <svg><use href="#i-arrow"/></svg></button>
       </nav>
+      <div class="lang">
+        <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language: English"><img src="assets/flags/gb.svg" alt="" width="24" height="16"><span>EN</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <ul class="lang__menu" hidden>
+          <li><a href="./" hreflang="en" lang="en" aria-current="page"><img src="assets/flags/gb.svg" alt="" width="24" height="16"><b>EN</b>English</a></li>
+          <li><a href="nl/" hreflang="nl" lang="nl"><img src="assets/flags/nl.svg" alt="" width="24" height="16"><b>NL</b>Nederlands</a></li>
+          <li><a href="de/" hreflang="de" lang="de"><img src="assets/flags/de.svg" alt="" width="24" height="16"><b>DE</b>Deutsch</a></li>
+          <li><a href="sv/" hreflang="sv" lang="sv"><img src="assets/flags/se.svg" alt="" width="24" height="16"><b>SV</b>Svenska</a></li>
+          <li><a href="pl/" hreflang="pl" lang="pl"><img src="assets/flags/pl.svg" alt="" width="24" height="16"><b>PL</b>Polski</a></li>
+          <li><a href="it/" hreflang="it" lang="it"><img src="assets/flags/it.svg" alt="" width="24" height="16"><b>IT</b>Italiano</a></li>
+          <li><a href="cs/" hreflang="cs" lang="cs"><img src="assets/flags/cz.svg" alt="" width="24" height="16"><b>CS</b>Čeština</a></li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -962,25 +1013,25 @@
         <div class="field">
           <label for="q-topic">Product</label>
           <select id="q-topic" name="topic">
-            <option>Deicing Rock Salt</option>
-            <option>Washed &amp; Crushed Salt</option>
-            <option>Washed, Crushed &amp; Screened Salt</option>
-            <option>Fine &amp; Coarse Industrial Salt</option>
-            <option>Water Softener Tablet Salt</option>
-            <option>High-Purity Sodium Chloride (Vacuum Salt)</option>
-            <option>Table &amp; Kitchen Salt (Refined)</option>
-            <option>Sea Salt</option>
-            <option>Other</option>
+            <option value="Deicing Rock Salt">Deicing Rock Salt</option>
+            <option value="Washed &amp; Crushed Salt">Washed &amp; Crushed Salt</option>
+            <option value="Washed, Crushed &amp; Screened Salt">Washed, Crushed &amp; Screened Salt</option>
+            <option value="Fine &amp; Coarse Industrial Salt">Fine &amp; Coarse Industrial Salt</option>
+            <option value="Water Softener Tablet Salt">Water Softener Tablet Salt</option>
+            <option value="High-Purity Sodium Chloride (Vacuum Salt)">High-Purity Sodium Chloride (Vacuum Salt)</option>
+            <option value="Table &amp; Kitchen Salt (Refined)">Table &amp; Kitchen Salt (Refined)</option>
+            <option value="Sea Salt">Sea Salt</option>
+            <option value="Other">Other</option>
           </select>
         </div>
         <div class="field">
           <label for="q-supply">Supply</label>
           <select id="q-supply" name="supply">
-            <option>Bags (20 / 40 / 50 / 55 lb)</option>
-            <option>Containerized bags (FOB Egyptian port)</option>
-            <option>Bulk vessel cargo (FOB Egyptian port)</option>
-            <option>Jumbo bags</option>
-            <option>Not sure yet</option>
+            <option value="Bags (20 / 40 / 50 / 55 lb)">Bags (20 / 40 / 50 / 55 lb)</option>
+            <option value="Containerized bags (FOB Egyptian port)">Containerized bags (FOB Egyptian port)</option>
+            <option value="Bulk vessel cargo (FOB Egyptian port)">Bulk vessel cargo (FOB Egyptian port)</option>
+            <option value="Jumbo bags">Jumbo bags</option>
+            <option value="Not sure yet">Not sure yet</option>
           </select>
         </div>
         <p class="field__note field--full">Availability, specifications and food-grade compliance are confirmed with each quote.</p>
@@ -988,12 +1039,12 @@
         <div class="field">
           <label for="q-pallets">Pallets needed</label>
           <select id="q-pallets" name="pallets">
-            <option>Not applicable (bulk)</option>
-            <option>Under 10</option>
-            <option>10–50</option>
-            <option>50–100</option>
-            <option>100–500</option>
-            <option>500+</option>
+            <option value="Not applicable (bulk)">Not applicable (bulk)</option>
+            <option value="Under 10">Under 10</option>
+            <option value="10–50">10–50</option>
+            <option value="50–100">50–100</option>
+            <option value="100–500">100–500</option>
+            <option value="500+">500+</option>
           </select>
         </div>
         <div class="field field--full"><label for="q-location">Delivery state or country</label><input id="q-location" name="location" placeholder="e.g. New York, or destination port"></div>
@@ -1019,6 +1070,27 @@
     const status = document.getElementById('quote-status');
     const nav = document.getElementById('site-nav');
     const navToggle = document.querySelector('.nav-toggle');
+
+    // Switch to the hamburger menu whenever the header links do not fit on one line.
+    const headerBar = header.querySelector('.container');
+    const fitHeader = () => {
+      header.classList.remove('is-compact');
+      const limit = headerBar.getBoundingClientRect().right - parseFloat(getComputedStyle(headerBar).paddingRight);
+      const lang = headerBar.querySelector('.lang');
+      if (nav.scrollWidth > nav.clientWidth + 1 || lang.getBoundingClientRect().right > limit + 1) header.classList.add('is-compact');
+    };
+    fitHeader();
+    window.addEventListener('resize', fitHeader);
+    window.addEventListener('load', fitHeader);
+    if (document.fonts) document.fonts.ready.then(fitHeader);
+
+    // Language menu
+    const langBtn = document.querySelector('.lang__btn');
+    const langMenu = document.querySelector('.lang__menu');
+    const setLang = (open) => { langMenu.hidden = !open; langBtn.setAttribute('aria-expanded', String(open)); };
+    langBtn.addEventListener('click', (e) => { e.stopPropagation(); setLang(langMenu.hidden); });
+    document.addEventListener('click', (e) => { if (!e.target.closest('.lang')) setLang(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setLang(false); });
 
     const onScroll = () => header.classList.toggle('is-stuck', window.scrollY > 8);
     window.addEventListener('scroll', onScroll, { passive: true });
@@ -1171,6 +1243,7 @@
             'Pallets needed': d.get('pallets'),
             Delivery: d.get('location'),
             Details: d.get('details'),
+            Language: document.documentElement.lang.toUpperCase(),
             _subject: `Quote request — ${d.get('topic')}`,
             _replyto: d.get('email'),
             _template: 'table',

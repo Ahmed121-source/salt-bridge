@@ -1,0 +1,1264 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salt Bridge Global — Steenzout voor gladheidsbestrijding &amp; strooizout | Siwa-oase, Egypte</title>
+  <meta name="description" content="Salt Bridge Global levert steenzout voor gladheidsbestrijding, dooizout en verpakt zout uit de Siwa-oase in Egypte: gewassen, gebroken en gezeefd zout, industriezout, zouttabletten voor waterontharders, vacuümzout en geraffineerd keukenzout.">
+  <link rel="canonical" href="https://saltbridgeglobal.com/nl/">
+  <link rel="alternate" hreflang="en" href="https://saltbridgeglobal.com/">
+  <link rel="alternate" hreflang="nl" href="https://saltbridgeglobal.com/nl/">
+  <link rel="alternate" hreflang="de" href="https://saltbridgeglobal.com/de/">
+  <link rel="alternate" hreflang="sv" href="https://saltbridgeglobal.com/sv/">
+  <link rel="alternate" hreflang="pl" href="https://saltbridgeglobal.com/pl/">
+  <link rel="alternate" hreflang="it" href="https://saltbridgeglobal.com/it/">
+  <link rel="alternate" hreflang="cs" href="https://saltbridgeglobal.com/cs/">
+  <link rel="alternate" hreflang="x-default" href="https://saltbridgeglobal.com/">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="../assets/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="../assets/favicon-192.png">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../brand-colors.css">
+  <style>
+    :root {
+      /* Outfit is a visual match for the reference lettering, pending approval. */
+      --font: "Outfit", var(--salt-font);
+      --container: 1200px;
+      --gutter: clamp(20px, 4vw, 40px);
+      --radius: 18px;
+      --header-h: 94px;
+      --line: #dcefeb;
+      --tint: #dff5f0;
+      --body-ink: #1d3340;
+      --shadow: 0 1px 2px rgba(7, 57, 72, .04), 0 12px 32px rgba(7, 57, 72, .07);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); }
+    body {
+      margin: 0;
+      background: var(--salt-white);
+      color: var(--body-ink);
+      font-family: var(--font);
+      font-weight: 300;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    img, video { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    h1, h2, h3 { margin: 0; color: var(--salt-heading); font-weight: 600; letter-spacing: -.02em; line-height: 1.08; }
+    p, ul, dl, dd, figure { margin: 0; }
+    ul { padding: 0; list-style: none; }
+    :focus-visible { outline: 3px solid var(--salt-teal); outline-offset: 3px; border-radius: 6px; }
+
+    .container { width: 100%; max-width: calc(var(--container) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+    .section { padding-block: clamp(64px, 9vw, 120px); }
+    .section--mint { background: var(--salt-page-bg); }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: var(--salt-teal); font-size: .875rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: currentColor; }
+    .section-head { max-width: 720px; margin-bottom: clamp(36px, 5vw, 56px); }
+    .section-head h2 { margin-top: 14px; font-size: clamp(2rem, 4.4vw, 3.25rem); }
+    .section-head p { margin-top: 16px; font-size: 1.25rem; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .6em;
+      padding: .85em 1.75em;
+      border: 1.5px solid var(--salt-teal); border-radius: 999px;
+      background: var(--salt-teal); color: var(--salt-white);
+      font: 500 1.0625rem/1.2 var(--font); white-space: nowrap; cursor: pointer;
+      transition: background .2s, border-color .2s, color .2s, box-shadow .2s;
+    }
+    .btn svg { width: 1.1em; height: 1.1em; transition: transform .2s; }
+    .btn:hover { background: #017f7e; border-color: #017f7e; box-shadow: 0 8px 20px rgba(1, 152, 151, .28); }
+    .btn:hover svg { transform: translateX(3px); }
+    .btn--sm { padding: .75em 1.5em; font-size: 1rem; }
+    .btn--lg { padding: 1em 2em; font-size: 1.1875rem; }
+    .btn--light { background: transparent; border-color: rgba(255, 255, 255, .7); }
+    .btn--light:hover { background: var(--salt-white); border-color: var(--salt-white); color: var(--salt-heading); box-shadow: none; }
+    .text-link { display: inline-flex; align-items: center; gap: .55em; padding: 0; border: 0; background: none; color: var(--salt-teal); font: 500 1.0625rem/1.2 var(--font); cursor: pointer; }
+    .text-link svg { width: 1.1em; height: 1.1em; transition: transform .2s; }
+    .text-link:hover { color: var(--salt-deep-blue); }
+    .text-link:hover svg { transform: translateX(4px); }
+
+    /* Header: white, so the supplied white-background logo sits cleanly */
+    .site-header { position: sticky; top: 0; z-index: 50; height: var(--header-h); background: rgba(255, 255, 255, .94); backdrop-filter: blur(10px); border-bottom: 1px solid transparent; transition: border-color .2s, box-shadow .2s; }
+    .site-header.is-stuck { border-color: var(--line); box-shadow: 0 6px 24px rgba(7, 57, 72, .06); }
+    .site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; height: 100%; max-width: calc(1600px + 2 * var(--gutter)); }
+    .logo { flex: none; display: inline-flex; align-items: center; }
+    .logo img { height: 72px; width: auto; }
+    .nav { display: flex; align-items: center; gap: clamp(14px, 1.3vw, 20px); }
+    .nav ul { display: flex; gap: clamp(14px, 1.3vw, 20px); }
+    .site-header .nav ul a:not(.btn) { font-size: .9375rem; }
+    .nav a, .nav .btn { white-space: nowrap; }
+    .nav a:not(.btn) { color: var(--salt-heading); font-size: 1rem; font-weight: 400; padding-block: 6px; border-bottom: 2px solid transparent; transition: color .2s, border-color .2s; }
+    .nav a:not(.btn):hover, .nav a.is-current { color: var(--salt-teal); border-color: var(--salt-teal); }
+    .nav-toggle { display: none; width: 46px; height: 46px; border: 0; border-radius: 50%; background: var(--tint); color: var(--salt-heading); cursor: pointer; }
+    .nav-toggle svg { width: 22px; height: 22px; }
+    .site-header .nav { margin-left: auto; }
+    /* Language menu */
+    .lang { position: relative; flex: none; }
+    .lang__btn { display: inline-flex; align-items: center; gap: 8px; height: 42px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; background: var(--salt-white); color: var(--salt-heading); font: inherit; font-size: .875rem; font-weight: 600; cursor: pointer; }
+    .lang__btn:hover { border-color: var(--salt-teal); }
+    .lang__btn > svg { width: 12px; height: 12px; transition: transform .2s; }
+    .lang__btn[aria-expanded="true"] > svg { transform: rotate(180deg); }
+    .lang img { width: 24px; height: 16px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0, 0, 0, .1); }
+    .lang__menu { position: absolute; right: 0; top: calc(100% + 8px); z-index: 60; min-width: 200px; margin: 0; padding: 6px; list-style: none; background: var(--salt-white); border-radius: 14px; box-shadow: 0 20px 50px rgba(7, 57, 72, .18); }
+    .lang__menu[hidden] { display: none; }
+    .lang__menu a { display: flex; align-items: center; gap: 12px; padding: 9px 12px; border-radius: 10px; color: var(--salt-heading); text-decoration: none; font-size: .9375rem; }
+    .lang__menu a b { width: 24px; font-weight: 600; }
+    .lang__menu a:hover, .lang__menu a[aria-current] { background: var(--tint); }
+    /* Hamburger menu when the links do not fit on one line (longer languages) */
+    .site-header.is-compact .logo img { height: 52px; }
+    .site-header.is-compact .nav-toggle { display: grid; place-items: center; }
+    .site-header.is-compact .nav { display: none; position: absolute; top: calc(100% + 8px); left: var(--gutter); right: var(--gutter); flex-direction: column; align-items: stretch; gap: 16px; padding: 20px; background: var(--salt-white); border-radius: var(--radius); box-shadow: 0 20px 50px rgba(7, 57, 72, .18); }
+    .site-header.is-compact .nav.is-open { display: flex; }
+    .site-header.is-compact .nav ul { flex-direction: column; gap: 4px; }
+    .site-header.is-compact .nav ul a:not(.btn) { display: block; padding: 10px 4px; font-size: 1.125rem; }
+    .site-header.is-compact .lang { margin-left: auto; }
+    .site-header.is-compact .nav-toggle { order: 3; }
+
+    /* Hero: full-screen media with centred title */
+    .hero { position: relative; display: grid; min-height: min(calc(100vh - var(--header-h)), 1000px); min-height: min(calc(100svh - var(--header-h)), 1000px); overflow: hidden; background: var(--salt-deep-blue); color: var(--salt-white); }
+    .hero__media, .hero__media > * { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    /* Negative first delay so the first photo is already visible on load */
+    .hero__media img { opacity: 0; animation: hero-slide 28s -1.5s infinite; }
+    .hero__media img:nth-child(2) { animation-delay: 5.5s; }
+    .hero__media img:nth-child(3) { animation-delay: 12.5s; }
+    .hero__media img:nth-child(4) { animation-delay: 19.5s; }
+    @keyframes hero-slide {
+      0% { opacity: 0; transform: scale(1.02); }
+      5%, 25% { opacity: 1; }
+      32%, 100% { opacity: 0; transform: scale(1.1); }
+    }
+    .hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 10, 43, .34) 0%, rgba(7, 57, 72, .38) 55%, rgba(0, 10, 43, .74) 100%); }
+    .hero__inner { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding-block: 72px 48px; }
+    .hero .eyebrow { color: #a8ece6; }
+    .hero h1 { margin-top: 20px; max-width: 13em; color: var(--salt-white); font-size: clamp(2.75rem, 7.4vw, 6rem); font-weight: 700; letter-spacing: -.03em; line-height: .98; text-wrap: balance; }
+    .hero__lede { margin-top: 24px; max-width: 30em; font-size: clamp(1.1875rem, 2vw, 1.5rem); line-height: 1.35; text-wrap: balance; }
+    .hero__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 36px; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-bottom: clamp(28px, 4vw, 44px); background: var(--salt-white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; }
+    .stats > div { padding: clamp(22px, 3vw, 32px) 20px; }
+    .stats > div + div { border-left: 1px solid var(--line); }
+    .stats dt { color: var(--salt-teal); font-size: clamp(1.75rem, 3.4vw, 2.75rem); font-weight: 600; letter-spacing: -.02em; line-height: 1.1; }
+    .stats dd { margin-top: 8px; color: var(--salt-heading); font-size: 1rem; line-height: 1.35; }
+
+    /* Source */
+    .split { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: clamp(32px, 6vw, 88px); }
+    .split__media { position: relative; }
+    #source .split { grid-template-columns: 1.3fr 1fr; }
+    #source .split__media > img:first-child { aspect-ratio: 5 / 4; }
+    .split__media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); }
+    .split__media img + img { position: absolute; right: -18px; bottom: -32px; width: 44%; aspect-ratio: 1; border: 6px solid var(--salt-white); box-shadow: var(--shadow); }
+    .split h2 { margin-top: 14px; font-size: clamp(2rem, 4.4vw, 3.25rem); }
+    .split p { margin-top: 18px; }
+    .split .tags { margin: 22px 0 0; }
+    .about { align-items: start; }
+    .about .about__lead { font-size: 1.25rem; line-height: 1.5; color: var(--salt-heading); }
+    .about .split__media img { aspect-ratio: 4 / 5; }
+    .split .route { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; margin-top: 20px; padding: 10px 18px; border-radius: 999px; background: var(--tint); color: var(--salt-heading); font-weight: 600; }
+    .route svg { width: 18px; height: 18px; color: var(--salt-teal); }
+    .route em { padding-left: 12px; border-left: 1px solid var(--line); color: var(--salt-teal); font-style: normal; font-weight: 500; font-size: .9375rem; }
+    .split__media--product { margin: 0; padding: clamp(24px, 4vw, 48px); background: var(--salt-page-bg); border-radius: var(--radius); text-align: center; }
+    .split__media--product img { width: auto; max-width: 100%; max-height: 560px; aspect-ratio: auto; margin-inline: auto; object-fit: contain; border-radius: 0; filter: drop-shadow(0 18px 30px rgba(7, 57, 72, .18)); }
+    .split__media--product figcaption { margin-top: 20px; color: var(--salt-heading); font-size: 1.0625rem; }
+    .split .btn { margin-top: 28px; }
+    .checks strong { font-weight: 600; }
+    .checks { display: grid; gap: 12px; margin-top: 26px; }
+    .checks li { display: flex; gap: 12px; align-items: flex-start; color: var(--salt-heading); font-weight: 400; line-height: 1.4; }
+    .checks svg { flex: none; width: 24px; height: 24px; padding: 5px; border-radius: 50%; background: var(--tint); color: var(--salt-teal); }
+
+    /* Process reel: photo sequence that plays like a film, one step at a time */
+    .reel { position: relative; display: grid; align-items: end; min-height: clamp(580px, 88vh, 860px); overflow: hidden; background: var(--salt-deep-blue); color: var(--salt-white); }
+    .reel__slides img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1.2s ease, transform 9s linear; }
+    .reel__slides img.is-active { opacity: 1; transform: scale(1.08); }
+    .reel::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(0, 10, 43, .8) 0%, rgba(0, 10, 43, .34) 58%, rgba(0, 10, 43, .12) 100%), linear-gradient(180deg, rgba(0, 10, 43, .1) 45%, rgba(0, 10, 43, .82) 100%); }
+    .reel__inner { position: relative; z-index: 1; padding-block: clamp(56px, 8vw, 96px) clamp(28px, 4vw, 44px); }
+    .reel .eyebrow { color: #a8ece6; }
+    .reel h2 { margin-top: 14px; color: var(--salt-white); font-size: clamp(2rem, 4.4vw, 3.25rem); }
+    .reel__panels { display: grid; max-width: 30em; margin-top: clamp(32px, 6vw, 72px); }
+    .reel__panel + .reel__panel { margin-top: 28px; }
+    .js .reel__panel { grid-area: 1 / 1; margin: 0; opacity: 0; visibility: hidden; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease, visibility .6s; }
+    .js .reel__panel.is-active { opacity: 1; visibility: visible; transform: none; }
+    .reel__panel span { color: #a8ece6; font-size: 1rem; font-weight: 600; letter-spacing: .14em; }
+    .reel__panel h3 { margin-top: 6px; color: var(--salt-white); font-size: clamp(1.75rem, 3.6vw, 2.75rem); }
+    .reel__panel p { margin-top: 10px; font-size: 1.1875rem; line-height: 1.45; }
+    .reel__nav { display: none; align-items: flex-end; gap: clamp(10px, 1.6vw, 20px); margin-top: clamp(28px, 4vw, 44px); }
+    .js .reel__nav { display: flex; }
+    .reel__toggle { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border: 1.5px solid rgba(255, 255, 255, .6); border-radius: 50%; background: transparent; color: var(--salt-white); cursor: pointer; transition: background .2s, color .2s; }
+    .reel__toggle:hover { background: var(--salt-white); color: var(--salt-heading); }
+    .reel__toggle svg { width: 18px; height: 18px; }
+    .reel__toggle svg + svg, .reel.is-paused .reel__toggle svg:first-child { display: none; }
+    .reel.is-paused .reel__toggle svg + svg { display: block; }
+    .reel__step { flex: 1; display: grid; gap: 10px; padding: 0; border: 0; background: none; color: rgba(255, 255, 255, .66); font: 500 1rem/1.2 var(--font); text-align: left; cursor: pointer; transition: color .2s; }
+    .reel__step:hover, .reel__step.is-active { color: var(--salt-white); }
+    .reel__step i { display: block; height: 3px; border-radius: 3px; background: rgba(255, 255, 255, .3); overflow: hidden; }
+    .reel__step i::after { content: ""; display: block; width: 0; height: 100%; background: #a8ece6; }
+    .reel__step.is-active i::after { animation: reel-progress 6s linear forwards; }
+    .reel.is-paused .reel__step i::after, .reel.is-offscreen .reel__step i::after { animation-play-state: paused; }
+    @keyframes reel-progress { to { width: 100%; } }
+
+    /* Products */
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(20px, 2.6vw, 32px); }
+    .card { display: flex; flex-direction: column; background: var(--salt-white); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform .25s, box-shadow .25s; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 2px 4px rgba(7, 57, 72, .05), 0 22px 48px rgba(7, 57, 72, .13); }
+    .card > img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+    .card__body { display: flex; flex-direction: column; flex: 1; padding: 26px 28px 30px; }
+    .card h3 { font-size: 1.625rem; }
+    .card p { margin-top: 10px; font-size: 1.0625rem; line-height: 1.5; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 24px; }
+    .tags li { padding: .3em .85em; border-radius: 999px; background: var(--salt-page-bg); border: 1px solid var(--line); color: var(--salt-deep-blue); font-size: .9375rem; font-weight: 400; }
+    .card .text-link { margin-top: auto; align-self: flex-start; }
+
+    .products-intro { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(24px, 5vw, 72px); align-items: end; margin-bottom: clamp(36px, 5vw, 56px); }
+    .products-intro .section-head { margin-bottom: 0; }
+    .products-intro .checks { margin-top: 0; padding: 24px 26px; background: var(--salt-white); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .card h3 span { display: block; margin-top: 4px; color: var(--salt-teal); font-size: 1.0625rem; font-weight: 500; letter-spacing: 0; }
+    .card h3 + .text-link { padding-top: 20px; }
+    .card .tags { margin-bottom: 20px; }
+    .card .card__meta { margin-top: 0; font-size: 1rem; }
+    .card .card__meta + .card__meta { margin-top: 8px; }
+    .card__meta strong { color: var(--salt-heading); font-weight: 600; }
+    .card p + .text-link { padding-top: 20px; }
+    .card--wide { grid-column: span 2; flex-direction: row; }
+    .card--wide > img { width: 50%; aspect-ratio: auto; }
+    .custom { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(20px, 2.6vw, 32px); }
+    .custom > div { padding: 28px 26px; background: var(--salt-white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .custom svg { width: 32px; height: 32px; padding: 7px; border-radius: 50%; background: var(--tint); color: var(--salt-teal); }
+    .custom h3 { margin-top: 16px; font-size: 1.375rem; }
+    .custom p { margin-top: 8px; font-size: 1.0625rem; line-height: 1.5; }
+
+    /* Applications */
+    .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(16px, 2vw, 24px); }
+    .tiles .panel { min-height: 400px; padding: 26px 24px; }
+    .tiles .panel h3 { font-size: 1.625rem; }
+
+    /* Specifications */
+    .specs { display: grid; grid-template-columns: 1fr 1.15fr; gap: clamp(32px, 6vw, 80px); align-items: start; }
+    .spec-facts { display: grid; gap: 0; margin-top: 8px; }
+    .spec-facts > div { display: grid; grid-template-columns: 9.5em 1fr; gap: 16px; padding-block: 18px; border-top: 1px solid var(--line); }
+    .spec-facts dt { color: var(--salt-teal); font-size: .9375rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding-top: .2em; }
+    .spec-facts dd { color: var(--salt-heading); font-weight: 400; line-height: 1.45; }
+    .docs { display: grid; grid-template-rows: auto 1fr; overflow: hidden; border-radius: var(--radius); background: var(--salt-deep-blue); box-shadow: var(--shadow); }
+    .docs__text { padding: clamp(28px, 4vw, 44px); color: #d6f3ef; }
+    .docs__text .eyebrow { color: #a8ece6; }
+    .docs__text h3 { margin-top: 12px; color: var(--salt-white); font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.15; }
+    .docs__text p { margin-top: 12px; font-size: 1.0625rem; line-height: 1.5; }
+    .docs__text .btn { margin-top: 24px; }
+    .docs__art { position: relative; min-height: 300px; background: linear-gradient(135deg, var(--salt-teal), #0b7f86); overflow: hidden; }
+    .doc { position: absolute; display: grid; align-content: start; gap: 7px; width: 46%; aspect-ratio: 8.5 / 11; padding: 14px 14px 0; background: var(--salt-white); border-radius: 4px; box-shadow: 0 18px 40px rgba(0, 10, 43, .35); }
+    .doc img { width: 62%; height: auto; margin-bottom: 4px; }
+    .doc strong { color: var(--salt-heading); font-size: .8125rem; line-height: 1.2; padding-bottom: 6px; border-bottom: 2px solid var(--salt-teal); }
+    .doc i { display: block; height: 5px; border-radius: 3px; background: #dbe6ea; }
+    .doc i.short { width: 60%; }
+    .doc__label { margin-top: 4px; color: var(--salt-teal); font-size: .625rem; font-weight: 600; letter-spacing: .02em; }
+    .doc--left { left: 6%; top: 18%; transform: rotate(-9deg); }
+    .doc--right { right: 6%; top: 16%; transform: rotate(8deg); }
+    .doc--front { left: 27%; top: 9%; z-index: 1; }
+    .table-card { background: var(--salt-white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    .table-card h3 { padding: 24px 28px 18px; font-size: 1.375rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 1.0625rem; }
+    th, td { padding: 11px 28px; text-align: left; border-top: 1px solid var(--line); }
+    thead th { background: var(--salt-page-bg); color: var(--salt-deep-blue); font-size: .875rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+    tbody th { font-weight: 300; }
+    tbody th span { color: #5c7480; font-size: .9375rem; }
+    td { text-align: right; color: var(--salt-heading); font-weight: 500; font-variant-numeric: tabular-nums; }
+    thead th:last-child { text-align: right; }
+    .table-card p { padding: 16px 28px 22px; border-top: 1px solid var(--line); color: #5c7480; font-size: .9375rem; line-height: 1.45; }
+
+    /* Supply */
+    .supply-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(20px, 2.6vw, 32px); }
+    .panel { position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 420px; padding: clamp(24px, 3vw, 40px); border-radius: var(--radius); overflow: hidden; color: var(--salt-white); background: var(--salt-deep-blue); }
+    .panel img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+    .panel:hover img { transform: scale(1.04); }
+    .panel::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 10, 43, .05) 20%, rgba(0, 10, 43, .86) 100%); }
+    .panel > :not(img) { position: relative; z-index: 1; }
+    .panel h3 { color: var(--salt-white); font-size: clamp(1.625rem, 2.6vw, 2rem); }
+    .panel p { margin-top: 8px; max-width: 26em; font-size: 1.0625rem; line-height: 1.45; }
+    .panel .tags { margin: 16px 0 0; }
+    .panel .tags li { background: rgba(255, 255, 255, .16); border-color: rgba(255, 255, 255, .3); color: var(--salt-white); backdrop-filter: blur(4px); }
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 4vw, 56px); margin-top: clamp(40px, 6vw, 72px); }
+    .feature__icon { display: grid; place-items: center; width: 60px; height: 60px; margin-bottom: 18px; border-radius: 50%; background: var(--tint); color: var(--salt-heading); }
+    .feature__icon svg { width: 28px; height: 28px; }
+    .feature h3 { font-size: 1.375rem; }
+    .feature p { margin-top: 8px; font-size: 1.0625rem; line-height: 1.5; }
+
+    /* Gallery */
+    .gallery-head { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: clamp(28px, 4vw, 44px); }
+    .gallery-head .section-head { margin-bottom: 0; }
+    .gallery-filters { display: flex; flex-wrap: wrap; gap: 8px; }
+    .gallery-filters button { padding: .55em 1.15em; border: 1px solid var(--line); border-radius: 999px; background: var(--salt-white); color: var(--salt-heading); font: 500 .9375rem/1 var(--font); cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+    .gallery-filters button:hover { border-color: var(--salt-teal); color: var(--salt-teal); }
+    .gallery-filters button[aria-pressed="true"] { background: var(--salt-deep-blue); border-color: var(--salt-deep-blue); color: var(--salt-white); }
+    .gallery { columns: 3; column-gap: 16px; }
+    .gallery figure { position: relative; margin: 0 0 16px; break-inside: avoid; border-radius: 14px; overflow: hidden; background: var(--tint); animation: gallery-in .35s ease both; }
+    .gallery figure[hidden] { display: none; }
+    .gallery button { display: block; width: 100%; padding: 0; border: 0; background: none; cursor: zoom-in; }
+    .gallery img { display: block; width: 100%; height: auto; transition: transform .5s; }
+    .gallery figcaption { position: absolute; inset: auto 0 0; padding: 36px 16px 14px; background: linear-gradient(transparent, rgba(0, 10, 43, .72)); color: var(--salt-white); font-size: .9375rem; line-height: 1.3; opacity: 0; transform: translateY(6px); transition: opacity .25s, transform .25s; pointer-events: none; }
+    .gallery figure:hover img, .gallery figure:focus-within img { transform: scale(1.04); }
+    .gallery figure:hover figcaption, .gallery figure:focus-within figcaption { opacity: 1; transform: none; }
+    @keyframes gallery-in { from { opacity: 0; transform: translateY(8px); } }
+    @media (hover: none) { .gallery figcaption { opacity: 1; transform: none; } }
+
+    dialog.lightbox { width: 100vw; max-width: 100vw; height: 100vh; max-height: 100vh; margin: 0; padding: 0; border-radius: 0; background: rgba(0, 8, 28, .94); box-shadow: none; }
+    dialog.lightbox[open] { display: grid; place-items: center; }
+    dialog.lightbox::backdrop { background: transparent; }
+    .lightbox figure { margin: 0; display: grid; justify-items: center; gap: 14px; padding: 72px 88px 28px; }
+    .lightbox img { max-width: min(1400px, calc(100vw - 176px)); max-height: calc(100vh - 150px); width: auto; height: auto; border-radius: 10px; }
+    .lightbox figcaption { display: flex; gap: 16px; color: #d6f3ef; font-size: 1rem; }
+    .lightbox__count { color: #8fb8b2; }
+    .lightbox__btn { position: fixed; display: grid; place-items: center; width: 48px; height: 48px; border: 0; border-radius: 50%; background: rgba(255, 255, 255, .12); color: var(--salt-white); cursor: pointer; transition: background .2s; }
+    .lightbox__btn:hover { background: rgba(255, 255, 255, .24); }
+    .lightbox__btn svg { width: 22px; height: 22px; }
+    .lightbox__close { top: 20px; right: 20px; }
+    .lightbox__prev, .lightbox__next { top: 50%; transform: translateY(-50%); }
+    .lightbox__prev { left: 20px; }
+    .lightbox__prev svg { transform: rotate(180deg); }
+    .lightbox__next { right: 20px; }
+
+    /* Call to action */
+    .cta { position: relative; overflow: hidden; background: var(--salt-deep-blue); color: var(--salt-white); text-align: center; }
+    .cta > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .cta::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0, 10, 43, .78), rgba(7, 57, 72, .82)); }
+    .cta .container { position: relative; z-index: 1; padding-block: clamp(72px, 10vw, 128px); }
+    .cta h2 { color: var(--salt-white); font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 700; }
+    .cta p { margin: 16px auto 0; max-width: 28em; font-size: 1.3125rem; line-height: 1.4; }
+    .cta .btn { margin-top: 32px; }
+    .cta__contact { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 40px; margin: 40px 0 0; padding: 32px 0 0; border-top: 1px solid rgba(255, 255, 255, .18); list-style: none; font-size: 1.0625rem; line-height: 1.45; }
+    .cta__contact li { display: flex; align-items: flex-start; gap: 12px; text-align: left; }
+    .cta__contact svg { flex: none; width: 22px; height: 22px; margin-top: 1px; color: #a8ece6; }
+    .cta__contact a { color: inherit; text-decoration: none; }
+    .cta__contact small { display: block; margin-bottom: 4px; font-size: .75rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #a8ece6; }
+    .cta__contact address + a { display: inline-block; margin-top: 4px; }
+    @media (max-width: 560px) {
+      .site-header .container { gap: 10px; }
+      .lang__btn { padding: 0 10px; gap: 6px; }
+      .lang__btn > span { display: none; }
+      .site-header .logo img { height: 44px; }
+    }
+    @media (max-width: 400px) { .site-header .logo img { height: 38px; } }
+    h1, h2, h3, .btn { overflow-wrap: break-word; }
+    @media (max-width: 640px) { .cta__contact { flex-direction: column; align-items: flex-start; max-width: 320px; margin-inline: auto; } }
+    .cta__contact a:hover { color: #a8ece6; }
+    .cta--band h2 { max-width: 15em; margin-inline: auto; font-size: clamp(2rem, 4.8vw, 3.5rem); font-weight: 600; text-wrap: balance; }
+    .cta--band .eyebrow { margin-bottom: 16px; color: #a8ece6; }
+
+    /* Footer */
+    .site-footer { padding-block: 28px; border-top: 1px solid var(--line); }
+    .site-footer .container { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .site-footer small { color: #5c7480; font-size: .9375rem; }
+
+    /* Quote dialog */
+    dialog { width: min(640px, calc(100vw - 32px)); padding: 0; border: 0; border-radius: 20px; background: var(--salt-white); color: var(--body-ink); box-shadow: 0 30px 80px rgba(0, 10, 43, .35); }
+    dialog::backdrop { background: rgba(0, 10, 43, .55); backdrop-filter: blur(3px); }
+    .quote { padding: clamp(24px, 5vw, 36px); }
+    .quote__head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+    .quote h2 { font-size: 1.875rem; }
+    .quote__head p { margin-top: 6px; font-size: 1.0625rem; }
+    .quote__close { flex: none; display: grid; place-items: center; width: 40px; height: 40px; border: 0; border-radius: 50%; background: var(--tint); color: var(--salt-heading); cursor: pointer; }
+    .quote__close svg { width: 18px; height: 18px; }
+    .quote__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 18px; margin-top: 22px; align-items: start; }
+    .field { display: grid; gap: 6px; align-content: start; }
+    .quote__grid > .field__note { margin-top: -8px; }
+    .field--full { grid-column: 1 / -1; }
+    .field__optional { color: #5c7480; font-weight: 400; }
+    .field__note { color: #5c7480; font-size: .8125rem; line-height: 1.4; }
+    .field label { color: var(--salt-heading); font-size: .9375rem; font-weight: 500; }
+    .field input, .field select, .field textarea { width: 100%; padding: .7em .9em; border: 1.5px solid #cfe6e1; border-radius: 10px; background: var(--salt-mint); color: var(--salt-heading); font: 400 1rem/1.4 var(--font); }
+    .field input, .field select { height: 48px; }
+    .field select { padding-block: 0; text-overflow: ellipsis; }
+    .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--salt-teal); background: var(--salt-white); }
+    .field textarea { min-height: 96px; resize: vertical; }
+    .quote__foot { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 22px; }
+    .quote__status a { color: var(--salt-teal); text-decoration: underline; }
+    .btn:disabled { opacity: .6; cursor: wait; }
+    .quote__status { flex: 1; min-width: 12em; color: var(--salt-deep-blue); font-size: .9375rem; font-weight: 400; line-height: 1.4; }
+
+    /* Scroll reveal (only when JS is running) */
+    .js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+    .js .reveal.is-visible { opacity: 1; transform: none; }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .cards, .features, .custom { grid-template-columns: 1fr 1fr; }
+      .card--wide { grid-column: auto; flex-direction: column; }
+      .card--wide > img { width: 100%; aspect-ratio: 16 / 10; }
+      .specs, .split, #source .split, .products-intro { grid-template-columns: 1fr; }
+      .split__media { margin-bottom: 32px; }
+      .tiles { grid-template-columns: repeat(2, 1fr); }
+      .gallery { columns: 2; }
+    }
+    @media (max-width: 1500px) {
+      :root { --header-h: 78px; }
+      .logo img { height: 52px; }
+      .nav-toggle { display: grid; place-items: center; order: 3; }
+      .lang { margin-left: auto; }
+      .site-header .nav { display: none; position: absolute; top: calc(100% + 8px); left: var(--gutter); right: var(--gutter); flex-direction: column; align-items: stretch; gap: 16px; padding: 20px; background: var(--salt-white); border-radius: var(--radius); box-shadow: 0 20px 50px rgba(7, 57, 72, .18); }
+      .site-header .nav.is-open { display: flex; }
+      .site-header .nav ul { flex-direction: column; gap: 4px; }
+      .site-header .nav ul a:not(.btn) { display: block; padding: 10px 4px; font-size: 1.125rem; }
+    }
+    @media (max-width: 860px) {
+      .stats { grid-template-columns: 1fr; }
+      .stats > div { padding: 16px 12px; }
+      .stats > div + div { border-left: 0; border-top: 1px solid var(--line); }
+    }
+    @media (max-width: 680px) {
+      body { font-size: 1.0625rem; }
+      .cards, .features, .custom, .supply-grid, .tiles, .quote__grid { grid-template-columns: 1fr; }
+      .gallery { column-gap: 10px; }
+      .gallery figure { margin-bottom: 10px; border-radius: 10px; }
+      .gallery figcaption { padding: 24px 10px 8px; font-size: .8125rem; }
+      .lightbox figure { padding: 64px 12px 84px; }
+      .lightbox img { max-width: calc(100vw - 24px); max-height: calc(100vh - 170px); }
+      .lightbox__prev, .lightbox__next { top: auto; bottom: 20px; transform: none; }
+      .panel, .tiles .panel { min-height: 340px; }
+      .reel__step span { display: none; }
+      .spec-facts > div { grid-template-columns: 1fr; gap: 4px; }
+      th, td, .table-card h3, .table-card p { padding-inline: 18px; }
+      .split__media img + img { right: 10px; bottom: -24px; }
+      .site-footer .container { flex-direction: column; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+      .hero__media img { animation: none; }
+      .hero__media img:first-child { opacity: 1; }
+      .reel__step.is-active i::after { animation: none; width: 100%; }
+      .js .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12.500l5 5L20 6.500"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24" fill="currentColor"><path d="M7 5h3.500v14H7zM13.500 5H17v14h-3.500z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5l11 7-11 7z"/></symbol>
+    <symbol id="i-ship" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v4M7 7h10v5l-5-1.500L7 12zM3.500 13.500 12 11l8.500 2.500L18 19H6zM3 21.500c1.500 0 1.500-1 3-1s1.500 1 3 1 1.500-1 3-1 1.500 1 3 1 1.500-1 3-1 1.500 1 3 1"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4.500v9L12 21l-8-4.500v-9zM4 7.500l8 4.500 8-4.500M12 12v9"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.800 2.600 4 5.600 4 9s-1.200 6.400-4 9c-2.800-2.600-4-5.600-4-9s1.200-6.400 4-9z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3.500h3.500l1.800 4.500-2.300 1.500a11 11 0 0 0 6.500 6.500l1.500-2.300 4.500 1.800V19a1.500 1.500 0 0 1-1.500 1.500A16.500 16.500 0 0 1 3.500 5 1.500 1.500 0 0 1 5 3.500z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.500 6.500 12 13l8.500-6.500"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.200-7-11.500a7 7 0 0 1 14 0C19 14.800 12 21 12 21z"/><circle cx="12" cy="9.500" r="2.500"/></symbol>
+  </svg>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#top" aria-label="Salt Bridge Global – home">
+        <img src="../assets/salt-bridge-global-wide@2x.png" srcset="../assets/salt-bridge-global-wide@1x.png 1x, ../assets/salt-bridge-global-wide@2x.png 2x, ../assets/salt-bridge-global-wide@3x.png 3x" alt="Salt Bridge Global" width="332" height="72">
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="site-nav">
+        <svg><use href="#i-menu"/></svg>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Hoofdmenu">
+        <ul>
+          <li><a href="#about">Over ons</a></li>
+          <li><a href="#source">Herkomst</a></li>
+          <li><a href="#process">Proces</a></li>
+          <li><a href="#products">Producten</a></li>
+          <li><a href="#distribution">Distributie VS</a></li>
+          <li><a href="#applications">Toepassingen</a></li>
+          <li><a href="#specifications">Specificaties</a></li>
+          <li><a href="#supply">Levering</a></li>
+          <li><a href="#gallery">Galerij</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn btn--sm" type="button" data-quote>Offerte aanvragen <svg><use href="#i-arrow"/></svg></button>
+      </nav>
+      <div class="lang">
+        <button class="lang__btn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="Language: Nederlands"><img src="../assets/flags/nl.svg" alt="" width="24" height="16"><span>NL</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
+        <ul class="lang__menu" hidden>
+          <li><a href="../" hreflang="en" lang="en"><img src="../assets/flags/gb.svg" alt="" width="24" height="16"><b>EN</b>English</a></li>
+          <li><a href="../nl/" hreflang="nl" lang="nl" aria-current="page"><img src="../assets/flags/nl.svg" alt="" width="24" height="16"><b>NL</b>Nederlands</a></li>
+          <li><a href="../de/" hreflang="de" lang="de"><img src="../assets/flags/de.svg" alt="" width="24" height="16"><b>DE</b>Deutsch</a></li>
+          <li><a href="../sv/" hreflang="sv" lang="sv"><img src="../assets/flags/se.svg" alt="" width="24" height="16"><b>SV</b>Svenska</a></li>
+          <li><a href="../pl/" hreflang="pl" lang="pl"><img src="../assets/flags/pl.svg" alt="" width="24" height="16"><b>PL</b>Polski</a></li>
+          <li><a href="../it/" hreflang="it" lang="it"><img src="../assets/flags/it.svg" alt="" width="24" height="16"><b>IT</b>Italiano</a></li>
+          <li><a href="../cs/" hreflang="cs" lang="cs"><img src="../assets/flags/cz.svg" alt="" width="24" height="16"><b>CS</b>Čeština</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero__media" aria-hidden="true">
+        <img src="../assets/photos/lake-stockpiles.jpg" alt="">
+        <img src="../assets/photos/siwa-salt-lake.jpg" alt="">
+        <img src="../assets/photos/conveyor-stockpile.jpg" alt="">
+        <img src="../assets/photos/lake-horizon.jpg" alt="">
+        <!-- To use a background video instead of the photo slideshow, save it as
+             ../assets/hero.mp4 and replace the four images above with:
+             <video src="../assets/hero.mp4" poster="../assets/photos/lake-stockpiles.jpg" autoplay muted loop playsinline></video> -->
+      </div>
+      <div class="container hero__inner">
+        <span class="eyebrow">Siwa-oase · Egypte</span>
+        <h1>Steenzout uit de Siwa-oase</h1>
+        <p class="hero__lede">Strooizout in bulk, verpakt dooizout en speciale zoutsoorten voor distributeurs en zakelijke afnemers wereldwijd.</p>
+        <div class="hero__actions">
+          <button class="btn btn--lg" type="button" data-quote>Offerte aanvragen <svg><use href="#i-arrow"/></svg></button>
+          <a class="btn btn--lg btn--light" href="#products">Bekijk producten</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container split about">
+        <div class="reveal">
+          <span class="eyebrow">Over ons</span>
+          <h2>Egyptisch zout. Wereldwijde levering.</h2>
+          <p class="about__lead">Salt Bridge Global levert Egyptische zoutproducten aan distributeurs en zakelijke afnemers in de Verenigde Staten, Canada en Europa. Van hoogwaardig steenzout uit de Siwa-oase voor gladheidsbestrijding en industriële toepassingen tot geraffineerde en speciale zoutsoorten: wij bieden kwaliteiten, korrelgroottes en verpakkingen die zijn afgestemd op de specificaties van de klant.</p>
+          <p>Onze Egyptische activiteiten brengen meer dan tien jaar ervaring mee in zoutproductie en wereldwijde export. Met ons nieuwe kantoor in New York breidt Salt Bridge Global zijn aanwezigheid uit om klanten van dichterbij te ondersteunen en de levering aan de Amerikaanse markt te coördineren.</p>
+          <p>Wij bedienen groothandels, sneeuwruimers en hoveniers, detailhandelaren, scholen, winkelcentra, vastgoedbeheerders en leveranciers die overheidscontracten voor strooizout uitvoeren.</p>
+          <p>Ons assortiment omvat gewassen en gebroken steenzout, gezeefd zout, fijn en grof industriezout, zouttabletten voor waterontharders, zeer zuiver vacuümzout, geraffineerd keukenzout en zeezout. Wij leveren per bulkschip, in containers, in big bags en in zakken voor de detailhandel.</p>
+          <p>Ons operationele team coördineert binnenlands transport, opslag, afvullen in zakken, havenoverslag en verzending, inclusief het charteren van bulkschepen. Of u nu verpakte producten voor distributie nodig hebt of bulkzout voor de seizoensvraag, wij stemmen product, verpakking en zending samen met u af op uw wensen.</p>
+        </div>
+        <div class="split__media reveal">
+          <img src="../assets/gallery/vessel-loading.jpg" alt="Bulkzout wordt in een scheepsruim geladen" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mint" id="source">
+      <div class="container split">
+        <div class="split__media reveal">
+          <img src="../assets/photos/lake-stockpiles.jpg" alt="Witte zoutbergen naast een turquoise zoutmeer in de Siwa-oase" loading="lazy">
+          <img src="../assets/gallery/coarse-salt-hand.jpg" alt="Wit steenzout in een hand" loading="lazy">
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">De herkomst</span>
+          <h2>Natuurlijk wit zout uit de Westelijke Woestijn van Egypte</h2>
+          <p>Ons steenzout komt van zoutwinningslocaties in de Egyptische Siwa-oase, waar het uit natuurlijke zoutmeren wordt gewonnen en wordt voorbereid op verwerking en verzending.</p>
+          <ul class="checks">
+            <li><svg><use href="#i-check"/></svg>Minimaal 98,5% natriumchloride, met een vochtgehalte van maximaal 1%</li>
+            <li><svg><use href="#i-check"/></svg>Natuurlijk witte kleur</li>
+            <li><svg><use href="#i-check"/></svg>Gezeefd tot de korrelgrootte die uw toepassing vraagt</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="reel" id="process">
+      <div class="reel__slides" aria-hidden="true">
+        <img class="is-active" src="../assets/gallery/harvesting-lake-edge.jpg" alt="" loading="lazy">
+        <img src="../assets/gallery/stockpiles-sunset.jpg" alt="" loading="lazy">
+        <img src="../assets/gallery/screening-plant.jpg" alt="" loading="lazy">
+        <img src="../assets/gallery/jumbo-bags-truck.jpg" alt="" loading="lazy">
+      </div>
+      <div class="container reel__inner">
+        <span class="eyebrow">Het proces</span>
+        <h2>Van meer tot lading</h2>
+        <div class="reel__panels">
+          <article class="reel__panel is-active">
+            <span>01</span>
+            <h3>Winning</h3>
+            <p>Het zout wordt gewonnen uit de turquoise zoutmeren van de Siwa-oase.</p>
+          </article>
+          <article class="reel__panel">
+            <span>02</span>
+            <h3>Opslag</h3>
+            <p>Het wordt in de open lucht opgeslagen, onder de woestijnzon.</p>
+          </article>
+          <article class="reel__panel">
+            <span>03</span>
+            <h3>Wassen, breken en zeven</h3>
+            <p>Gewassen, gebroken en gezeefd tot de korrelgrootte die uw toepassing vraagt.</p>
+          </article>
+          <article class="reel__panel">
+            <span>04</span>
+            <h3>Verpakken en verzenden</h3>
+            <p>Verpakt in zakken van 20, 40, 50 en 55 lb, gepalletiseerd en in containers verscheept, of los klaargezet voor een bulkschip.</p>
+          </article>
+        </div>
+        <div class="reel__nav">
+          <button class="reel__toggle" type="button" aria-label="Pauzeren">
+            <svg><use href="#i-pause"/></svg>
+            <svg><use href="#i-play"/></svg>
+          </button>
+          <button class="reel__step is-active" type="button"><span>Winning</span><i></i></button>
+          <button class="reel__step" type="button"><span>Opslag</span><i></i></button>
+          <button class="reel__step" type="button"><span>Wassen, breken en zeven</span><i></i></button>
+          <button class="reel__step" type="button"><span>Verpakken en verzenden</span><i></i></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mint" id="products">
+      <div class="container">
+        <div class="products-intro">
+          <div class="section-head reveal">
+            <span class="eyebrow">Onze producten</span>
+            <h2>Wij voorzien in al uw zoutbehoeften</h2>
+            <p>Met onze producten en geïntegreerde oplossingen spelen wij in op de behoeften van onze klanten. Wij helpen onze zakelijke klanten economische waarde te creëren en leveren een positieve bijdrage aan het leven van onze klanten.</p>
+          </div>
+          <ul class="checks reveal">
+            <li><svg><use href="#i-check"/></svg>Specificaties, korrelgroottes, verpakkingen en toevoegingen op verzoek van de klant</li>
+            <li><svg><use href="#i-check"/></svg>Wij sturen u graag een monster</li>
+            <li><svg><use href="#i-check"/></svg>Verkrijgbaar als steenzout en zeezout</li>
+          </ul>
+        </div>
+        <div class="cards">
+          <article class="card card--wide reveal">
+            <img src="../assets/photos/coarse-rock-salt.jpg" alt="Bergen grof steenzout" loading="lazy">
+            <div class="card__body">
+              <h3>Steenzout voor gladheidsbestrijding <span>(strooizout)</span></h3>
+              <p>Zeer zuiver, snelwerkend steenzout uit de Siwa-oase voor wegen, snelwegen, luchthavens, opritten en voetpaden.</p>
+              <ul class="tags">
+                <li>NaCl ≥ 98,5%</li>
+                <li>Vocht ≤ 1%</li>
+                <li>Korrel 1–5 mm, aanpasbaar</li>
+                <li>Zakken: 20, 40, 50 en 55 lb</li>
+                <li>Bulk per schip of in containers, FOB Egyptische haven</li>
+              </ul>
+              <p class="card__meta"><strong>Kwaliteiten:</strong> Steenzout voor snelwegen · Premium steenzout · Dooizout voor bedrijven · Dooizout voor de industrie</p>
+              <p class="card__meta"><strong>Korrel per markt:</strong> VS (middel) · Canada (grof) · Europa (fijn), of volgens uw specificatie</p>
+              <button class="text-link" type="button" data-quote="Deicing Rock Salt">Offerte aanvragen <svg><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="card reveal">
+            <img src="../assets/gallery/coarse-crystals.jpg" alt="Close-up van gewassen en gebroken wit zout" loading="lazy">
+            <div class="card__body">
+              <h3>Gewassen &amp; gebroken zout</h3>
+              <p>Natuurlijk steenzout, gewassen en gebroken voor bulk- en zakelijk gebruik.</p>
+              <button class="text-link" type="button" data-quote="Washed &amp; Crushed Salt">Offerte aanvragen <svg><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="card reveal">
+            <img src="../assets/gallery/conveyor-pile.jpg" alt="Transportband vormt een berg gezeefd wit zout" loading="lazy">
+            <div class="card__body">
+              <h3>Gewassen, gebroken &amp; gezeefd zout</h3>
+              <p>Gewassen, gebroken en gezeefd tot de korrelgrootte die u opgeeft.</p>
+              <button class="text-link" type="button" data-quote="Washed, Crushed &amp; Screened Salt">Offerte aanvragen <svg><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="card reveal">
+            <img src="../assets/photos/conveyor-stockpile.jpg" alt="Transportband voert zout aan op een zoutberg" loading="lazy">
+            <div class="card__body">
+              <h3>Fijn &amp; grof industriezout</h3>
+              <p>Zeer zuiver industriezout in fijne en grove korrel.</p>
+              <button class="text-link" type="button" data-quote="Fine &amp; Coarse Industrial Salt">Offerte aanvragen <svg><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="card reveal">
+            <img src="../assets/photos/salt-tablets.jpg" alt="Geperste witte zouttabletten" loading="lazy">
+            <div class="card__body">
+              <h3>Zouttabletten voor waterontharders</h3>
+              <p>Voor waterontharding en -behandeling, zoutelektrolyse-installaties voor zwembaden en reiniging.</p>
+              <button class="text-link" type="button" data-quote="Water Softener Tablet Salt">Offerte aanvragen <svg><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="card reveal">
+            <img src="../assets/photos/salt-texture.jpg" alt="Fijn, wit, zeer zuiver zout" loading="lazy">
+            <div class="card__body">
+              <h3>Zeer zuiver natriumchloride <span>(vacuümzout)</span></h3>
+              <p>Geraffineerd tot de hoogste zuiverheid voor veeleisende industriële en farmaceutische toepassingen.</p>
+              <button class="text-link" type="button" data-quote="High-Purity Sodium Chloride (Vacuum Salt)">Offerte aanvragen <svg><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="card reveal">
+            <img src="../assets/photos/table-salt.jpg" alt="Wit zout in een houten schaal met een houten schepje" loading="lazy">
+            <div class="card__body">
+              <h3>Tafel- &amp; keukenzout <span>(geraffineerd)</span></h3>
+              <p>Geraffineerd en gemalen tot fijne, snel oplossende korrels.</p>
+              <button class="text-link" type="button" data-quote="Table &amp; Kitchen Salt (Refined)">Offerte aanvragen <svg><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+          <article class="card reveal">
+            <img src="../assets/photos/sea-salt.jpg" alt="Hoop geoogst wit zeezout in een zoutpan aan de kust" loading="lazy">
+            <div class="card__body">
+              <h3>Zeezout</h3>
+              <p>Naast ons steenzout verkrijgbaar, in de korrelgrootte en verpakking die u nodig hebt.</p>
+              <button class="text-link" type="button" data-quote="Sea Salt">Offerte aanvragen <svg><use href="#i-arrow"/></svg></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="distribution">
+      <div class="container split">
+        <div class="reveal">
+          <span class="eyebrow">Distributie VS</span>
+          <h2>Direct geïmporteerd. Gedistribueerd in de hele VS.</h2>
+          <p class="route"><span>Siwa-oase, Egypte</span><svg aria-hidden="true"><use href="#i-arrow"/></svg><span>New York</span><em>Directe import</em></p>
+          <p>Salt Bridge Global importeert steenzout voor gladheidsbestrijding rechtstreeks uit de Siwa-oase en distribueert het als verpakt dooizout in de Verenigde Staten vanuit onze vestiging in Ridgewood, New York. Omdat wij de keten van bron tot pallet beheren, bieden wij constante kwaliteit, betrouwbare voorraad gedurende het hele winterseizoen en concurrerende prijzen.</p>
+          <ul class="checks">
+            <li><svg><use href="#i-check"/></svg><span><strong>Overheidsopdrachtnemers:</strong> distributeurs met strooizoutcontracten van staten, county’s en gemeenten</span></li>
+            <li><svg><use href="#i-check"/></svg>Groothandels en regionale distributeurs</li>
+            <li><svg><use href="#i-check"/></svg>Bouwmarkten, tuincentra en doe-het-zelfzaken</li>
+            <li><svg><use href="#i-check"/></svg>Hoveniers en sneeuwruimbedrijven</li>
+            <li><svg><use href="#i-check"/></svg>Vastgoedbeheerders en facilitaire diensten</li>
+            <li><svg><use href="#i-check"/></svg>Scholen en winkelcentra</li>
+          </ul>
+          <p>Wij leveren aan distributeurs die strooizoutcontracten van staten en gemeenten uitvoeren, met het volume, de constante kwaliteit en de documentatie die openbare aanbestedingen vereisen.</p>
+          <ul class="tags">
+            <li>Zakken van 20 lb</li>
+            <li>Zakken van 40 lb</li>
+            <li>Zakken van 50 lb</li>
+            <li>Zakken van 55 lb</li>
+            <li>Per pallet of per vrachtwagen</li>
+          </ul>
+          <button class="btn btn--lg" type="button" data-quote="Deicing Rock Salt">Word distributeur <svg><use href="#i-arrow"/></svg></button>
+        </div>
+        <figure class="split__media split__media--product reveal">
+          <img src="../assets/photos/polar-pass-bag.png" alt="Polar Pass Premium Rock Salt Ice Melt, zak van 55 lb" width="893" height="1200" loading="lazy">
+          <figcaption><strong>Polar Pass</strong> Premium Rock Salt Ice Melt</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="applications">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Toepassingen</span>
+          <h2>Eén bron, vele toepassingen</h2>
+        </div>
+        <div class="tiles">
+          <article class="panel reveal">
+            <img src="../assets/photos/refined-salt.jpg" alt="Grove steenzoutkristallen" loading="lazy">
+            <h3>Gladheidsbestrijding &amp; dooizout</h3>
+            <p>Ruw steenzout voor gladheidsbestrijding op winterse wegen, snelwegen en voetpaden.</p>
+          </article>
+          <article class="panel reveal">
+            <img src="../assets/photos/salt-tablets.jpg" alt="Geperste witte zouttabletten" loading="lazy">
+            <h3>Waterontharding</h3>
+            <p>Zouttabletten voor waterontharders.</p>
+          </article>
+          <article class="panel reveal">
+            <img src="../assets/photos/conveyor-stockpile.jpg" alt="Transportband voert zout aan op een zoutberg" loading="lazy">
+            <h3>Industrie</h3>
+            <p>Fijn en grof industriezout en zeer zuiver natriumchloride.</p>
+          </article>
+          <article class="panel reveal">
+            <img src="../assets/photos/table-salt.jpg" alt="Wit zout in een houten schaal met een houten schepje" loading="lazy">
+            <h3>Tafel en keuken</h3>
+            <p>Geraffineerd zout voor voedingsdoeleinden.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta cta--band">
+      <img src="../assets/photos/stockpile-reflection.jpg" alt="" loading="lazy">
+      <div class="container reveal">
+        <span class="eyebrow">Export</span>
+        <h2>Strooizout en dooizout verscheept naar de VS, Canada en Europa</h2>
+        <a class="btn btn--lg btn--light" href="#supply">Bekijk leveringsopties</a>
+      </div>
+    </section>
+
+    <section class="section" id="specifications">
+      <div class="container specs">
+        <div class="reveal">
+          <div class="section-head">
+            <span class="eyebrow">Specificaties</span>
+            <h2>Steenzout uit de Siwa-oase in één oogopslag</h2>
+          </div>
+          <dl class="spec-facts">
+            <div><dt>Zuiverheid</dt><dd>≥ 98,5% NaCl</dd></div>
+            <div><dt>Vocht</dt><dd>≤ 1%</dd></div>
+            <div><dt>Capaciteit</dt><dd>3.000.000 ton per jaar, op aanvraag uit te breiden</dd></div>
+            <div><dt>Kleur</dt><dd>Wit</dd></div>
+            <div><dt>Zeving</dt><dd>Elke korrelgrootte, op bestelling gezeefd</dd></div>
+            <div><dt>Prijs</dt><dd>Op basis van korrel, verpakking en hoeveelheid</dd></div>
+            <div><dt>Betaling</dt><dd>Accreditief (L/C), bankoverschrijving (T/T) of betaling tegen documenten, per order overeengekomen</dd></div>
+          </dl>
+        </div>
+        <div class="docs reveal">
+          <div class="docs__text">
+            <span class="eyebrow">Documentatie</span>
+            <h3>Technische specificaties &amp; chemische analyse</h3>
+            <p>Zendingen worden bij het laden bemonsterd en geanalyseerd om te controleren of ze aan de overeengekomen specificatie voldoen. Op verzoek van de koper kan een onafhankelijke inspectie worden geregeld door een erkend extern laboratorium, zoals TÜV Austria, SGS of een ander inspectiebureau naar keuze, waarbij een analysecertificaat voor uw zending wordt afgegeven.</p>
+            <p>Neem contact met ons op voor onze technische specificaties, het veiligheidsinformatieblad of een monsteranalyse.</p>
+            <button class="btn btn--lg" type="button" data-quote>Neem contact op <svg><use href="#i-arrow"/></svg></button>
+          </div>
+          <div class="docs__art" aria-hidden="true">
+            <div class="doc doc--left">
+              <img src="../assets/salt-bridge-global-wide@1x.png" alt="">
+              <strong>Analysecertificaat</strong>
+              <i></i><i></i><i class="short"></i><i></i><i class="short"></i>
+            </div>
+            <div class="doc doc--right">
+              <img src="../assets/salt-bridge-global-wide@1x.png" alt="">
+              <strong>Productinformatieblad</strong>
+              <i></i><i class="short"></i><i></i><i></i><i class="short"></i>
+            </div>
+            <div class="doc doc--front">
+              <img src="../assets/salt-bridge-global-wide@1x.png" alt="">
+              <strong>Veiligheidsinformatieblad</strong>
+              <span class="doc__label">1. Productidentificatie</span>
+              <i></i><i class="short"></i><i></i>
+              <span class="doc__label">2. Samenstelling</span>
+              <i></i><i></i><i class="short"></i>
+              <span class="doc__label">3. Hantering &amp; opslag</span>
+              <i></i><i class="short"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--mint" id="supply">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Levering</span>
+          <h2>Verpakt voor aannemers, distributeurs en detailhandelaren. Bulk voor terminals en grote afnemers.</h2>
+          <p>Van een container met gepalletiseerde zakken tot een volledig bulkschip.</p>
+        </div>
+        <dl class="stats reveal">
+          <div><dt>3 mln ton</dt><dd>Jaarcapaciteit, op aanvraag uit te breiden</dd></div>
+          <div><dt>Bulk</dt><dd>Scheepslading, FOB Egyptische haven, prijs op aanvraag</dd></div>
+          <div><dt>20–55 lb</dt><dd>Vier standaard zakmaten plus big bags. Verpakking op maat en andere zakmaten op aanvraag.</dd></div>
+        </dl>
+        <div class="supply-grid">
+          <article class="panel reveal">
+            <img src="../assets/photos/jumbo-bags-vessel.jpg" alt="Big bags met steenzout in een scheepsruim" loading="lazy">
+            <h3>Steenzout in zakken</h3>
+            <p>Grof steenzout in vier zakmaten, gepalletiseerd en in containers verscheept. Grotere zakken zijn geschikt voor aannemers en bedrijfslocaties, kleinere zakken voor winkels die aan vastgoedeigenaren verkopen. Big bags op aanvraag.</p>
+            <ul class="tags">
+              <li>20 lb (9,07 kg)</li>
+              <li>40 lb (18,14 kg)</li>
+              <li>50 lb (22,68 kg)</li>
+              <li>55 lb (24,95 kg)</li>
+              <li>Containers, FOB Egyptische haven</li>
+            </ul>
+          </article>
+          <article class="panel reveal">
+            <img src="../assets/gallery/vessel-hold.jpg" alt="Bulkzout in een scheepsruim" loading="lazy">
+            <h3>Bulk: scheepslading</h3>
+            <p>Voor importeurs, terminals en distributeurs met opslag in de haven.</p>
+            <ul class="tags">
+              <li>Hoeveelheid op aanvraag</li>
+              <li>FOB Egyptische haven</li>
+              <li>3.000.000 ton per jaar, op aanvraag uit te breiden</li>
+            </ul>
+          </article>
+        </div>
+        <div class="features">
+          <div class="feature reveal">
+            <div class="feature__icon"><svg><use href="#i-ship"/></svg></div>
+            <h3>Verzending &amp; scheepscharter</h3>
+            <p>Naast de levering van zout kunnen wij voor uw order containertransport en het charteren van bulkschepen coördineren. Vrachtvoorwaarden en vrachtkosten worden apart geoffreerd.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon"><svg><use href="#i-box"/></svg></div>
+            <h3>Schepen en containers</h3>
+            <p>Bulklading per schip of gepalletiseerde zakken in containers, beide FOB Egyptische haven.</p>
+          </div>
+          <div class="feature reveal">
+            <div class="feature__icon"><svg><use href="#i-globe"/></svg></div>
+            <h3>Exportmarkten</h3>
+            <p>Strooizout en dooizout uit Siwa worden verscheept naar de VS, Canada en Europa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="custom">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Op bestelling</span>
+          <h2>Afgestemd op uw wensen</h2>
+          <p>Elke order wordt opgebouwd rond wat u nodig hebt. Geef ons de hoeveelheid, kwaliteit en verpakking door, en wij stemmen alles daarop af.</p>
+        </div>
+        <div class="custom reveal">
+          <div>
+            <svg><use href="#i-check"/></svg>
+            <h3>Hoeveelheden op maat</h3>
+            <p>Gepalletiseerde zakken per container en bulklading per schip, geoffreerd voor uw hoeveelheid; jaarvolumes boven 3.000.000 ton op aanvraag.</p>
+          </div>
+          <div>
+            <svg><use href="#i-check"/></svg>
+            <h3>Korrelgrootte</h3>
+            <p>Gewassen, gebroken en gezeefd tot precies de korrelgrootte die uw toepassing vraagt.</p>
+          </div>
+          <div>
+            <svg><use href="#i-check"/></svg>
+            <h3>Verpakking</h3>
+            <p>Standaardzakken van 20, 40, 50 en 55 lb, big bags op aanvraag, los per schip of verpakking op maat volgens uw specificatie.</p>
+          </div>
+          <div>
+            <svg><use href="#i-check"/></svg>
+            <h3>Specificaties</h3>
+            <p>Zuiverheid, toevoegingen zoals jodium en antiklontermiddel, en een monster voordat u bestelt.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta cta--band">
+      <img src="../assets/photos/white-stockpiles.jpg" alt="" loading="lazy">
+      <div class="container reveal">
+        <span class="eyebrow">Bestellingen vóór het seizoen</span>
+        <h2>Zeker van uw wintervoorraad</h2>
+        <p>Leg prijzen en leverdata voor strooizout en dooizout vast voordat het seizoen begint, zolang voorraad en scheepsruimte beschikbaar zijn.</p>
+        <button class="btn btn--lg btn--light" type="button" data-quote="Deicing Rock Salt">Reserveer uw voorraad <svg><use href="#i-arrow"/></svg></button>
+      </div>
+    </section>
+
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="gallery-head reveal">
+          <div class="section-head">
+            <span class="eyebrow">Galerij</span>
+            <h2>Van de Siwa-oase tot in het scheepsruim</h2>
+            <p>Winnen, zeven, opslaan en laden: een kijkje bij het zout dat wij leveren en hoe het bij u komt.</p>
+          </div>
+          <div class="gallery-filters" role="group" aria-label="Foto’s filteren">
+            <button type="button" aria-pressed="true" data-filter="all">Alle</button>
+            <button type="button" aria-pressed="false" data-filter="source">Herkomst</button>
+            <button type="button" aria-pressed="false" data-filter="production">Productie</button>
+            <button type="button" aria-pressed="false" data-filter="product">Product</button>
+            <button type="button" aria-pressed="false" data-filter="shipping">Verzending</button>
+          </div>
+        </div>
+        <div class="gallery">
+          <figure data-cat="source"><button type="button"><img src="../assets/gallery/siwa-salt-lake.jpg" alt="" width="652" height="367" loading="lazy"></button><figcaption>Turquoise zoutmeer, Siwa-oase</figcaption></figure>
+          <figure data-cat="production"><button type="button"><img src="../assets/gallery/conveyor-pile.jpg" alt="" width="1200" height="1600" loading="lazy"></button><figcaption>Transportband vormt een nieuwe zoutberg</figcaption></figure>
+          <figure data-cat="shipping"><button type="button"><img src="../assets/gallery/vessel-loading.jpg" alt="" width="960" height="1280" loading="lazy"></button><figcaption>Bulkzout wordt in een scheepsruim geladen</figcaption></figure>
+          <figure data-cat="product"><button type="button"><img src="../assets/gallery/coarse-crystals.jpg" alt="" width="1600" height="1200" loading="lazy"></button><figcaption>Grove steenzoutkristallen</figcaption></figure>
+          <figure data-cat="source"><button type="button"><img src="../assets/photos/lake-horizon.jpg" alt="" width="1280" height="960" loading="lazy"></button><figcaption>Zoutbergen langs het meer</figcaption></figure>
+          <figure data-cat="source"><button type="button"><img src="../assets/gallery/siwa-lake-shore.jpg" alt="" width="1280" height="960" loading="lazy"></button><figcaption>Oever van een zoutmeer, Siwa-oase</figcaption></figure>
+          <figure data-cat="source"><button type="button"><img src="../assets/gallery/excavator-stockpile.jpg" alt="" width="1600" height="1200" loading="lazy"></button><figcaption>Graafmachine zet gewonnen zout op een berg</figcaption></figure>
+          <figure data-cat="production"><button type="button"><img src="../assets/gallery/stockpiles-sunset.jpg" alt="" width="1600" height="1200" loading="lazy"></button><figcaption>Gesorteerde zoutbergen bij zonsondergang</figcaption></figure>
+          <figure data-cat="product"><button type="button"><img src="../assets/photos/refined-salt.jpg" alt="" width="526" height="616" loading="lazy"></button><figcaption>Gezeefde steenzoutkristallen</figcaption></figure>
+          <figure data-cat="product"><button type="button"><img src="../assets/gallery/coarse-salt-hand.jpg" alt="" width="1200" height="1600" loading="lazy"></button><figcaption>Grof zout in de hand</figcaption></figure>
+          <figure data-cat="production"><button type="button"><img src="../assets/gallery/screening-plant.jpg" alt="" width="1600" height="1200" loading="lazy"></button><figcaption>Zeefinstallatie sorteert zout op korrelgrootte</figcaption></figure>
+          <figure data-cat="shipping"><button type="button"><img src="../assets/photos/jumbo-bags-vessel.jpg" alt="" width="579" height="559" loading="lazy"></button><figcaption>Big bags in een scheepsruim</figcaption></figure>
+          <figure data-cat="shipping"><button type="button"><img src="../assets/gallery/jumbo-bags-truck.jpg" alt="" width="1170" height="658" loading="lazy"></button><figcaption>Big bags geladen voor transport naar de haven</figcaption></figure>
+          <figure data-cat="source"><button type="button"><img src="../assets/gallery/salt-crystals-lake.jpg" alt="" width="480" height="800" loading="lazy"></button><figcaption>Natuurlijke zoutkristallen op het meer</figcaption></figure>
+          <figure data-cat="production"><button type="button"><img src="../assets/gallery/conveyor-stockpile.jpg" alt="" width="1600" height="1200" loading="lazy"></button><figcaption>Transportband lost op de zoutberg</figcaption></figure>
+          <figure data-cat="product"><button type="button"><img src="../assets/gallery/salt-in-hand.jpg" alt="" width="1280" height="960" loading="lazy"></button><figcaption>Helder wit zout</figcaption></figure>
+          <figure data-cat="source"><button type="button"><img src="../assets/gallery/harvesting-lake-edge.jpg" alt="" width="1280" height="720" loading="lazy"></button><figcaption>Winning aan de rand van het meer</figcaption></figure>
+          <figure data-cat="production"><button type="button"><img src="../assets/gallery/loader-stockpile.jpg" alt="" width="1280" height="720" loading="lazy"></button><figcaption>Wiellader aan het werk bij de zoutberg</figcaption></figure>
+          <figure data-cat="production"><button type="button"><img src="../assets/gallery/stockpile-yard.jpg" alt="" width="1600" height="1200" loading="lazy"></button><figcaption>Opslagterrein</figcaption></figure>
+          <figure data-cat="product"><button type="button"><img src="../assets/gallery/crushed-salt-closeup.jpg" alt="" width="1200" height="1600" loading="lazy"></button><figcaption>Gebroken zout van dichtbij</figcaption></figure>
+          <figure data-cat="shipping"><button type="button"><img src="../assets/gallery/vessel-hold.jpg" alt="" width="1024" height="576" loading="lazy"></button><figcaption>Bulkzout in het ruim</figcaption></figure>
+          <figure data-cat="source"><button type="button"><img src="../assets/gallery/desert-stockpile.jpg" alt="" width="1280" height="720" loading="lazy"></button><figcaption>Ruw zout opgeslagen in de woestijn</figcaption></figure>
+          <figure data-cat="product"><button type="button"><img src="../assets/gallery/fine-grade.jpg" alt="" width="1200" height="1600" loading="lazy"></button><figcaption>Fijne korrel</figcaption></figure>
+          <figure data-cat="production"><button type="button"><img src="../assets/gallery/stockpile-closeup.jpg" alt="" width="1600" height="1200" loading="lazy"></button><figcaption>Oppervlak van een zoutberg</figcaption></figure>
+          <figure data-cat="product"><button type="button"><img src="../assets/gallery/salt-cupped-hands.jpg" alt="" width="382" height="568" loading="lazy"></button><figcaption>Zout in twee handen</figcaption></figure>
+          <figure data-cat="product"><button type="button"><img src="../assets/gallery/mixed-grade.jpg" alt="" width="1032" height="581" loading="lazy"></button><figcaption>Gemengde korrel van dichtbij</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Fotoviewer">
+      <figure>
+        <img alt="">
+        <figcaption><span class="lightbox__caption"></span><span class="lightbox__count"></span></figcaption>
+      </figure>
+      <button class="lightbox__btn lightbox__close" type="button" aria-label="Sluiten"><svg><use href="#i-close"/></svg></button>
+      <button class="lightbox__btn lightbox__prev" type="button" aria-label="Vorige foto"><svg><use href="#i-arrow"/></svg></button>
+      <button class="lightbox__btn lightbox__next" type="button" aria-label="Volgende foto"><svg><use href="#i-arrow"/></svg></button>
+    </dialog>
+
+    <section class="cta" id="contact">
+      <img src="../assets/photos/turquoise-lake.jpg" alt="" loading="lazy">
+      <div class="container">
+        <h2>Laten we over zout praten</h2>
+        <p>Laat ons weten welke kwaliteit, verpakking en hoeveelheid u nodig hebt, dan sturen wij u een offerte.</p>
+        <button class="btn btn--lg" type="button" data-quote>Offerte aanvragen <svg><use href="#i-arrow"/></svg></button>
+        <ul class="cta__contact">
+          <li><svg aria-hidden="true"><use href="#i-pin"/></svg><div><small>Winning &amp; productie</small><address style="font-style: normal">Siwa, Marsa Matruh<br>Egypte</address></div></li>
+          <li><svg aria-hidden="true"><use href="#i-pin"/></svg><div><small>Magazijn</small><address style="font-style: normal">Minaa Alexandria<br>Alexandrië, Egypte</address><a href="mailto:info@saltbridgeglobal.com">info@saltbridgeglobal.com</a><br><a href="tel:+201116660918">+20 111 666 0918</a></div></li>
+          <li><svg aria-hidden="true"><use href="#i-pin"/></svg><div><small>Contracten &amp; verkoop</small><address style="font-style: normal">59-35 Menahan St<br>Ridgewood, NY 11385</address><a href="mailto:sales@saltbridgeglobal.com">sales@saltbridgeglobal.com</a><br><a href="tel:+19296943611">(929) 694-3611</a></div></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <a class="logo" href="#top" aria-label="Salt Bridge Global – home">
+        <img src="../assets/salt-bridge-global-wide@2x.png" srcset="../assets/salt-bridge-global-wide@1x.png 1x, ../assets/salt-bridge-global-wide@2x.png 2x, ../assets/salt-bridge-global-wide@3x.png 3x" alt="Salt Bridge Global" width="332" height="72">
+      </a>
+      <nav class="nav" aria-label="Voettekst">
+        <ul>
+          <li><a href="#about">Over ons</a></li>
+          <li><a href="#source">Herkomst</a></li>
+          <li><a href="#products">Producten</a></li>
+          <li><a href="#specifications">Specificaties</a></li>
+          <li><a href="#supply">Levering</a></li>
+          <li><a href="#gallery">Galerij</a></li>
+        </ul>
+      </nav>
+      <small>© 2026 Salt Bridge Global</small>
+    </div>
+  </footer>
+
+  <dialog id="quote-dialog" aria-labelledby="quote-title">
+    <form class="quote" id="quote-form">
+      <div class="quote__head">
+        <div>
+          <h2 id="quote-title">Offerte aanvragen</h2>
+          <p>Vertel ons wat u nodig hebt, dan nemen wij contact met u op.</p>
+        </div>
+        <button class="quote__close" type="button" aria-label="Sluiten" data-close><svg><use href="#i-close"/></svg></button>
+      </div>
+      <div class="quote__grid">
+        <div class="field"><label for="q-name">Naam</label><input id="q-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="q-company">Bedrijf</label><input id="q-company" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="q-email">E-mail</label><input id="q-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="q-phone">Telefoon <span class="field__optional">(optioneel)</span></label><input id="q-phone" name="phone" type="tel" autocomplete="tel" placeholder="bijv. +31 20 123 4567"></div>
+        <div class="field">
+          <label for="q-topic">Product</label>
+          <select id="q-topic" name="topic">
+            <option value="Deicing Rock Salt">Steenzout voor gladheidsbestrijding</option>
+            <option value="Washed &amp; Crushed Salt">Gewassen &amp; gebroken zout</option>
+            <option value="Washed, Crushed &amp; Screened Salt">Gewassen, gebroken &amp; gezeefd zout</option>
+            <option value="Fine &amp; Coarse Industrial Salt">Fijn &amp; grof industriezout</option>
+            <option value="Water Softener Tablet Salt">Zouttabletten voor waterontharders</option>
+            <option value="High-Purity Sodium Chloride (Vacuum Salt)">Zeer zuiver natriumchloride (vacuümzout)</option>
+            <option value="Table &amp; Kitchen Salt (Refined)">Tafel- &amp; keukenzout (geraffineerd)</option>
+            <option value="Sea Salt">Zeezout</option>
+            <option value="Other">Anders</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="q-supply">Levering</label>
+          <select id="q-supply" name="supply">
+            <option value="Bags (20 / 40 / 50 / 55 lb)">Zakken (20 / 40 / 50 / 55 lb)</option>
+            <option value="Containerized bags (FOB Egyptian port)">Zakken in containers (FOB Egyptische haven)</option>
+            <option value="Bulk vessel cargo (FOB Egyptian port)">Bulk per schip (FOB Egyptische haven)</option>
+            <option value="Jumbo bags">Big bags</option>
+            <option value="Not sure yet">Weet ik nog niet</option>
+          </select>
+        </div>
+        <p class="field__note field--full">Beschikbaarheid, specificaties en geschiktheid voor levensmiddelen worden bij elke offerte bevestigd.</p>
+        <div class="field"><label for="q-qty">Hoeveelheid</label><input id="q-qty" name="quantity" placeholder="2 containers of 30.000 ton"></div>
+        <div class="field">
+          <label for="q-pallets">Benodigde pallets</label>
+          <select id="q-pallets" name="pallets">
+            <option value="Not applicable (bulk)">Niet van toepassing (bulk)</option>
+            <option value="Under 10">Minder dan 10</option>
+            <option value="10–50">10–50</option>
+            <option value="50–100">50–100</option>
+            <option value="100–500">100–500</option>
+            <option value="500+">500+</option>
+          </select>
+        </div>
+        <div class="field field--full"><label for="q-location">Leveringsregio of -land</label><input id="q-location" name="location" placeholder="bijv. Rotterdam of bestemmingshaven"></div>
+        <div class="field field--full"><label for="q-details">Details</label><textarea id="q-details" name="details" placeholder="Korrelgrootte, bestemmingshaven, planning…"></textarea></div>
+      </div>
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;">
+      <div class="quote__foot">
+        <button class="btn" type="submit">Aanvraag versturen <svg><use href="#i-arrow"/></svg></button>
+        <p class="quote__status" id="quote-status" role="status"></p>
+      </div>
+    </form>
+  </dialog>
+
+  <script>
+    // Salt Bridge Global’s sales address; quote requests are emailed here.
+    const QUOTE_EMAIL = 'sales@saltbridgeglobal.com';
+
+    document.documentElement.classList.add('js');
+
+    const header = document.querySelector('.site-header');
+    const dialog = document.getElementById('quote-dialog');
+    const form = document.getElementById('quote-form');
+    const status = document.getElementById('quote-status');
+    const nav = document.getElementById('site-nav');
+    const navToggle = document.querySelector('.nav-toggle');
+
+    // Switch to the hamburger menu whenever the header links do not fit on one line.
+    const headerBar = header.querySelector('.container');
+    const fitHeader = () => {
+      header.classList.remove('is-compact');
+      const limit = headerBar.getBoundingClientRect().right - parseFloat(getComputedStyle(headerBar).paddingRight);
+      const lang = headerBar.querySelector('.lang');
+      if (nav.scrollWidth > nav.clientWidth + 1 || lang.getBoundingClientRect().right > limit + 1) header.classList.add('is-compact');
+    };
+    fitHeader();
+    window.addEventListener('resize', fitHeader);
+    window.addEventListener('load', fitHeader);
+    if (document.fonts) document.fonts.ready.then(fitHeader);
+
+    // Language menu
+    const langBtn = document.querySelector('.lang__btn');
+    const langMenu = document.querySelector('.lang__menu');
+    const setLang = (open) => { langMenu.hidden = !open; langBtn.setAttribute('aria-expanded', String(open)); };
+    langBtn.addEventListener('click', (e) => { e.stopPropagation(); setLang(langMenu.hidden); });
+    document.addEventListener('click', (e) => { if (!e.target.closest('.lang')) setLang(false); });
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setLang(false); });
+
+    const onScroll = () => header.classList.toggle('is-stuck', window.scrollY > 8);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    const closeNav = () => { nav.classList.remove('is-open'); navToggle.setAttribute('aria-expanded', 'false'); };
+    navToggle.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+    nav.addEventListener('click', (e) => { if (e.target.closest('a')) closeNav(); });
+
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) { entry.target.classList.add('is-visible'); io.unobserve(entry.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      reveals.forEach((el) => io.observe(el));
+    } else {
+      reveals.forEach((el) => el.classList.add('is-visible'));
+    }
+
+    // Highlight the menu link for the section currently in view.
+    const navLinks = [...nav.querySelectorAll('ul a[href^="#"]')];
+    const navSections = navLinks.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    const setCurrentNav = () => {
+      const line = header.offsetHeight + window.innerHeight * 0.3;
+      let current = null;
+      navSections.forEach((sec) => { if (sec.getBoundingClientRect().top <= line) current = sec; });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) current = navSections[navSections.length - 1];
+      navLinks.forEach((a) => {
+        const on = current && a.getAttribute('href') === `#${current.id}`;
+        a.classList.toggle('is-current', on);
+        if (on) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
+      });
+    };
+    window.addEventListener('scroll', setCurrentNav, { passive: true });
+    window.addEventListener('resize', setCurrentNav);
+    setCurrentNav();
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Hero figures count up once on load.
+    if (!reducedMotion) {
+      document.querySelectorAll('[data-count]').forEach((el) => {
+        const target = Number(el.dataset.count);
+        const start = performance.now();
+        const tick = (now) => {
+          const t = Math.min((now - start) / 1600, 1);
+          el.textContent = Math.round(target * (1 - Math.pow(1 - t, 3))).toLocaleString('en-US');
+          if (t < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    }
+
+    // Process reel: each step's progress bar is a CSS animation; when it ends, the next step shows.
+    const reel = document.querySelector('.reel');
+    const reelToggle = reel.querySelector('.reel__toggle');
+    const reelSteps = [...reel.querySelectorAll('.reel__step')];
+    const reelParts = [reelSteps, reel.querySelectorAll('.reel__slides img'), reel.querySelectorAll('.reel__panel')];
+    const showStep = (i) => {
+      const current = i % reelSteps.length;
+      reelParts.forEach((list) => list.forEach((el, n) => el.classList.toggle('is-active', n === current)));
+    };
+    reelSteps.forEach((step, n) => {
+      step.addEventListener('click', () => showStep(n));
+      step.addEventListener('animationend', () => showStep(n + 1));
+    });
+    reelToggle.addEventListener('click', () => {
+      const paused = reel.classList.toggle('is-paused');
+      reelToggle.setAttribute('aria-label', paused ? 'Afspelen' : 'Pauzeren');
+    });
+    if (reducedMotion) reelToggle.hidden = true;
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(([entry]) => reel.classList.toggle('is-offscreen', !entry.isIntersecting)).observe(reel);
+    }
+
+    document.querySelectorAll('[data-quote]').forEach((el) => {
+      el.addEventListener('click', () => {
+        closeNav();
+        if (el.dataset.quote) form.topic.value = el.dataset.quote;
+        status.textContent = '';
+        dialog.showModal();
+      });
+    });
+    // Gallery: category filters and a full-screen viewer that steps through the visible photos.
+    const galleryItems = [...document.querySelectorAll('.gallery figure')];
+    galleryItems.forEach((fig) => { fig.querySelector('img').alt = fig.querySelector('figcaption').textContent; });
+    const filterButtons = document.querySelectorAll('.gallery-filters button');
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+        galleryItems.forEach((fig) => { fig.hidden = btn.dataset.filter !== 'all' && fig.dataset.cat !== btn.dataset.filter; });
+      });
+    });
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = lightbox.querySelector('img');
+    let lightboxIndex = 0;
+    const visibleItems = () => galleryItems.filter((fig) => !fig.hidden);
+    const showPhoto = (i) => {
+      const items = visibleItems();
+      lightboxIndex = (i + items.length) % items.length;
+      const fig = items[lightboxIndex];
+      lightboxImg.src = fig.querySelector('img').src;
+      lightboxImg.alt = fig.querySelector('figcaption').textContent;
+      lightbox.querySelector('.lightbox__caption').textContent = lightboxImg.alt;
+      lightbox.querySelector('.lightbox__count').textContent = `${lightboxIndex + 1} / ${items.length}`;
+    };
+    galleryItems.forEach((fig) => {
+      fig.querySelector('button').addEventListener('click', () => {
+        showPhoto(visibleItems().indexOf(fig));
+        lightbox.showModal();
+      });
+    });
+    lightbox.querySelector('.lightbox__close').addEventListener('click', () => lightbox.close());
+    lightbox.querySelector('.lightbox__prev').addEventListener('click', () => showPhoto(lightboxIndex - 1));
+    lightbox.querySelector('.lightbox__next').addEventListener('click', () => showPhoto(lightboxIndex + 1));
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox || e.target.tagName === 'FIGURE') lightbox.close(); });
+    lightbox.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') showPhoto(lightboxIndex - 1);
+      if (e.key === 'ArrowRight') showPhoto(lightboxIndex + 1);
+    });
+
+    dialog.querySelector('[data-close]').addEventListener('click', () => dialog.close());
+    dialog.addEventListener('click', (e) => { if (e.target === dialog) dialog.close(); });
+
+    // Sends the request in the background through FormSubmit, which emails it to QUOTE_EMAIL.
+    const submitBtn = form.querySelector('[type="submit"]');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const d = new FormData(form);
+      if (d.get('_honey')) return;                      // spam bots fill the hidden field
+      submitBtn.disabled = true;
+      status.textContent = 'Uw aanvraag wordt verzonden…';
+      try {
+        const res = await fetch(`https://formsubmit.co/ajax/${QUOTE_EMAIL}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify({
+            Name: d.get('name'),
+            Company: d.get('company'),
+            Email: d.get('email'),
+            Phone: d.get('phone'),
+            Product: d.get('topic'),
+            Supply: d.get('supply'),
+            Quantity: d.get('quantity'),
+            'Pallets needed': d.get('pallets'),
+            Delivery: d.get('location'),
+            Details: d.get('details'),
+            Language: document.documentElement.lang.toUpperCase(),
+            _subject: `Quote request — ${d.get('topic')}`,
+            _replyto: d.get('email'),
+            _template: 'table',
+          }),
+        });
+        const out = await res.json().catch(() => ({}));
+        if (!res.ok || String(out.success) === 'false') throw new Error(out.message || res.status);
+        form.reset();
+        status.textContent = 'Bedankt! Uw aanvraag is verzonden. Ons team neemt binnenkort contact met u op.';
+      } catch (err) {
+        status.innerHTML = 'Helaas kon uw aanvraag niet worden verzonden. Mail naar <a href="mailto:info@saltbridgeglobal.com">info@saltbridgeglobal.com</a> of bel <a href="tel:+19296943611">(929) 694-3611</a>.';
+      } finally {
+        submitBtn.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
