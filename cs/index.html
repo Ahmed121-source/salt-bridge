@@ -116,7 +116,18 @@
     .lang__menu a { display: flex; align-items: center; gap: 12px; padding: 9px 12px; border-radius: 10px; color: var(--salt-heading); text-decoration: none; font-size: .9375rem; }
     .lang__menu a b { width: 24px; font-weight: 600; }
     .lang__menu a:hover, .lang__menu a[aria-current] { background: var(--tint); }
-    /* Hamburger menu when the links do not fit on one line (longer languages) */
+    /* Longer languages: shrink the header in two steps before falling back to the hamburger menu */
+    .site-header.is-tight .container { gap: 14px; }
+    .site-header.is-tight .logo img { height: 60px; }
+    .site-header.is-tight .nav, .site-header.is-tight .nav ul { gap: 12px; }
+    .site-header.is-tight .nav ul a:not(.btn) { font-size: .875rem; }
+    .site-header.is-tight .nav .btn--sm { padding: .65em 1.1em; font-size: .9375rem; }
+    .site-header.is-tighter .container { gap: 10px; }
+    .site-header.is-tighter .logo img { height: 50px; }
+    .site-header.is-tighter .nav, .site-header.is-tighter .nav ul { gap: 9px; }
+    .site-header.is-tighter .nav ul a:not(.btn) { font-size: .8125rem; }
+    .site-header.is-tighter .nav .btn--sm { padding: .6em .95em; font-size: .875rem; }
+    /* Hamburger menu when the links still do not fit on one line */
     .site-header.is-compact .logo img { height: 52px; }
     .site-header.is-compact .nav-toggle { display: grid; place-items: center; }
     .site-header.is-compact .nav { display: none; position: absolute; top: calc(100% + 8px); left: var(--gutter); right: var(--gutter); flex-direction: column; align-items: stretch; gap: 16px; padding: 20px; background: var(--salt-white); border-radius: var(--radius); box-shadow: 0 20px 50px rgba(7, 57, 72, .18); }
@@ -1079,11 +1090,19 @@
 
     // Switch to the hamburger menu whenever the header links do not fit on one line.
     const headerBar = header.querySelector('.container');
-    const fitHeader = () => {
-      header.classList.remove('is-compact');
+    const headerFits = () => {
       const limit = headerBar.getBoundingClientRect().right - parseFloat(getComputedStyle(headerBar).paddingRight);
       const lang = headerBar.querySelector('.lang');
-      if (nav.scrollWidth > nav.clientWidth + 1 || lang.getBoundingClientRect().right > limit + 1) header.classList.add('is-compact');
+      return nav.scrollWidth <= nav.clientWidth + 1 && lang.getBoundingClientRect().right <= limit + 1;
+    };
+    const fitHeader = () => {
+      const steps = [[], ['is-tight'], ['is-tight', 'is-tighter'], ['is-compact']];
+      header.classList.remove('is-tight', 'is-tighter', 'is-compact');
+      for (const step of steps) {
+        header.classList.remove('is-tight', 'is-tighter', 'is-compact');
+        header.classList.add(...step);
+        if (step.includes('is-compact') || headerFits()) break;
+      }
     };
     fitHeader();
     window.addEventListener('resize', fitHeader);
